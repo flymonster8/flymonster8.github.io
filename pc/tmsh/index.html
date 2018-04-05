@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--兼容IE最新标准-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式网页必须加视口属性 缩放比为：1：1-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="index.css"/>
+    <script type="text/javascript" src="img/jquery1.42.min.js"></script>
+    <title>首页</title>
+
+</head>
+<body>
+
+<div class="topbar">
+    <div class="topbarbj"><img src="img/topbar.png" alt=""></div>
+    <div class="topc">欢迎进入天美手绘教育学院官网网站！
+        <div>
+            <ul>
+                <li><button>收藏本站</button></li>
+                <li><button>设为首页</button></li>
+                <li><button>联系我们</button></li>
+                <li><button style="border: none;">网上报名</button></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="logo">
+    <img src="img/logo.png" alt="">
+    <div>
+        <div class="ll">
+            <img src="img/tel.png" alt=""> &nbsp;&nbsp;
+        </div>
+        <div class="hot">
+            <div class="l1">&nbsp;&nbsp;报名热线</div>
+            <div class="l2">18548121101</div>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="navc">
+        <ul>
+            <li><a href="index.html" class="ck">首页</a></li>
+            <li><a href="gytm_bxys.html">关于天美</a></li>
+            <li><a href="zpzs.html">作品展示</a></li>
+            <li><a href="kctx.html">课程体系</a></li>
+            <li><a href="mfzl.html" >免费资料</a></li>
+            <li><a href="wsbm.html">网上报名</a></li>
+            <li><a href="kctx.html">新闻动态</a></li>
+            <li><a href="kctx.html">考研中心</a></li>
+            <li><a href="zxns.html">联系我们</a></li>
+            <li><a href="sjcj.html">设计承接</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="gg">
+    <div id="slideBoxs" class="slideBoxs">
+        <div class="hd" style="display: none;">
+            <ul><li>1</li><li>2</li><li>3</li></ul>
+        </div>
+        <div class="qd">
+            <ul>
+                <li><a href="#" target="_blank"><img src="img/gg1.jpg" /></a></li>
+                <li><a href="#" target="_blank"><img src="img/gg1.jpg" /></a></li>
+                <li><a href="#" target="_blank"><img src="img/gg1.jpg" /></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="img/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript">
+        jQuery(".slideBoxs").slide({mainCell:".qd ul",effect:"leftLoop",autoPlay:true,delayTime:300});
+    </script>
+</div>
+
+<div class="tips">
+    <div class="tipc">
+        <div class="til"><img src="img/tips.png" alt="">&nbsp;&nbsp;考研喜讯</div>
+        <div class="tir">
+            <div class="txtScroll-top">
+                <div class="hd" style="display: none;">
+                    <a class="next"></a>
+                    <ul></ul>
+                    <a class="prev"></a>
+                    <span class="pageState"></span>
+                </div>
+                <div class="bd">
+                    <ul class="infoList">
+                        <li><span class="date">2017-03-01</span><a href="#" target="_blank">中国打破了世界软件巨头规则</a></li>
+                        <li><span class="date">2017-03-01</span><a href="#" target="_blank">口语：会说中文就能说英语！</a></li>
+                        <li><span class="date">2017-03-01</span><a href="#" target="_blank">农场摘菜不如在线学外语好玩</a></li>
+                        <li><span class="date">2017-03-01</span><a href="#" target="_blank">数理化老师竟也看学习资料？</a></li>
+                        <li><span class="date">2017-03-01</span><a href="#" target="_blank">学英语送ipad2,45天突破听说</a></li>
+                        <li><span class="date">2017-03-01</span><a href="#" target="_blank">学外语，上北外！</a></li>
+                        <li><span class="date">2017-03-01</span><a href="#" target="_blank">那些无法理解的荒唐事</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                jQuery(".txtScroll-top").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"topLoop",autoPlay:true,vis:1});
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="quick">
+    <a href="#" class="check">
+        <div class="l1"><img src="img/zsjz.png" alt=""></div>
+        <div class="l2">招生简章</div>
+    </a>
+    <a href="#" class="ky">
+        <div class="l1"><img src="img/kykt.png" alt=""></div>
+        <div class="l2">考研快题</div>
+    </a>
+    <!--<a href="#" class="jx">-->
+    <a href="#" class="gry">
+        <div class="l1"><img src="img/jxsp.png" alt=""></div>
+        <div class="l2">教学视频</div>
+    </a>
+    <a href="#">
+        <div class="l1"><img src="img/sjsh.png" alt=""></div>
+        <div class="l2">设计手绘</div>
+    </a>
+    <a href="#" class="gry">
+        <div class="l1"><img src="img/sjrj.png" alt=""></div>
+        <div class="l2">设计软件</div>
+    </a>
+    <a href="#">
+        <div class="l1"><img src="img/sjjx.png" alt=""></div>
+        <div class="l2">书籍教学</div>
+    </a>
+    <a href="#" class="gry">
+        <div class="l1"><img src="img/zlxz.png" alt=""></div>
+        <div class="l2">资料下载</div>
+    </a>
+    <a href="#">
+        <div class="l1"><img src="img/bmxt.png" alt=""></div>
+        <div class="l2">报名系统</div>
+    </a>
+    <a href="#" class="gry">
+        <div class="l1"><img src="img/sjcj.png" alt=""></div>
+        <div class="l2">设计承接</div>
+    </a>
+    <a href="#" >
+        <div class="l1"><img src="img/zxyp.png" alt=""></div>
+        <div class="l2">在线应聘</div>
+    </a>
+
+</div>
+
+<div class="show">
+    <div class="l1">作品展示</div>
+    <div class="l2">works show</div>
+    <div class="l3"><img src="img/dash.png" alt=""><img class="mi" src="img/arrow.png" alt=""><img src="img/dash.png" alt=""></div>
+</div>
+
+
+<div class="showc">
+    <div class="sc">
+        <img src="img/s1.png" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+    <div class="sc">
+        <img src="img/s2.png" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+    <div class="sc">
+        <img src="img/s3.png" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+    <div class="sc">
+        <img src="img/s4.png" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+</div>
+
+<div class="news">
+    <div class="news_l">
+        <div class="l1">新闻动态&nbsp;&nbsp;<span>news</span><b><img class="mi" src="img/arrow.png" alt=""></b></div>
+        <div class="l2"><img src="img/dash.png" alt=""></div>
+        <div class="l3">
+            <ul>
+                <li><a href="#"><img src="img/list.png" alt="">2016研究生入学模拟考试暨培优班选拔考试 <span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">视觉传达设计中手绘线条的意义 <span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">视觉传达设计中手绘线条的意义 <span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">视觉传达设计图像造型最基本的要素——线条 <span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">呈现不仅仪是设计者个人爱好或习惯，更是个性风格的展现 <span>2017-2-25</span></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="news_r">
+        <div class="l1">高校信息&nbsp;&nbsp;<span>University Information</span><b><img class="mi" src="img/arrow.png" alt=""></b></div>
+        <div class="l2"><img src="img/dash.png" alt=""></div>
+        <div class="l3">
+            <ul>
+                <li><a href="#"><img src="img/list.png" alt="">今年河南省研究生考试将全部推行身份识别技术 <span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">考研降温 考试在即考生临阵打退堂鼓<span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">考研天价辅导是馅饼还是陷阱 业内：花钱不如求己 <span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">不再“求稳” 90后研究生群体八成想创业<span>2017-2-25</span></a></li>
+                <li><a href="#"><img src="img/list.png" alt="">2010-2012西安建筑科技大学考研真题<span>2017-2-25</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="show">
+    <div class="l1">天美手绘名师助你圆梦成功</div>
+    <div class="l2">tian mei Hand-painted teacher to help you succeed dreams</div>
+</div>
+
+<script type="text/javascript" src="img/jquery.SuperSlide.2.1.1.js"></script>
+<div class="ms">
+    <div class="hd">
+        <ul>
+            <li><a href="#" target="_blank"><img src="img/ms_02.jpg" alt=""></a></li>
+            <li><a href="#" target="_blank"><img src="img/ms_03.jpg" alt=""></a></li>
+            <li><a href="#" target="_blank"><img src="img/ms_04.jpg" alt=""></a></li>
+            <li><a href="#" target="_blank"><img src="img/ms_05.jpg" alt=""></a></li>
+            <li><a href="#" target="_blank"><img src="img/ms_06.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="bd">
+        <ul>
+            <li>
+                <div class="mascc">
+                    <div class="bdl">
+                        <div class="bdl1">
+                            <b>沙龙</b>技术总监
+                        </div>
+                        <div class="bdl2">毕业于上海东华大学，留学意大利马兰欧尼学院，曾参与爱玛电动车总部办公楼设计《中国手绘》第三辑作品发表……</div>
+                        <a href="#" class="bdl3">查看详情 >></a>
+                    </div>
+                    <div class="bdr">
+                        <a href="#">查看更多名师>></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mascc">
+                    <div class="bdl">
+                        <div class="bdl1">
+                            <b>美涛</b>技术总监
+                        </div>
+                        <div class="bdl2">毕业于上海东华大学，留学意大利马兰欧尼学院，曾参与爱玛电动车总部办公楼设计《中国手绘》第三辑作品发表……</div>
+                        <a href="#" class="bdl3">查看详情 >></a>
+                    </div>
+                    <div class="bdr">
+                        <a href="#">查看更多名师>></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mascc">
+                    <div class="bdl">
+                        <div class="bdl1">
+                            <b>沙宣</b>技术总监
+                        </div>
+                        <div class="bdl2">毕业于上海东华大学，留学意大利马兰欧尼学院，曾参与爱玛电动车总部办公楼设计《中国手绘》第三辑作品发表……</div>
+                        <a href="#" class="bdl3">查看详情 >></a>
+                    </div>
+                    <div class="bdr">
+                        <a href="#">查看更多名师>></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mascc">
+                    <div class="bdl">
+                        <div class="bdl1">
+                            <b>力士</b>技术总监
+                        </div>
+                        <div class="bdl2">毕业于上海东华大学，留学意大利马兰欧尼学院，曾参与爱玛电动车总部办公楼设计《中国手绘》第三辑作品发表……</div>
+                        <a href="#" class="bdl3">查看详情 >></a>
+                    </div>
+                    <div class="bdr">
+                        <a href="#">查看更多名师>></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mascc">
+                    <div class="bdl">
+                        <div class="bdl1">
+                            <b>haha</b>技术总监
+                        </div>
+                        <div class="bdl2">毕业于上海东华大学，留学意大利马兰欧尼学院，曾参与爱玛电动车总部办公楼设计《中国手绘》第三辑作品发表……</div>
+                        <a href="#" class="bdl3">查看详情 >></a>
+                    </div>
+                    <div class="bdr">
+                        <a href="#">查看更多名师>></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">jQuery(".ms").slide({ mainCell:".bd ul",effect:"left",autoPlay:true});</script>
+
+<div class="show">
+    <div class="l1">明星学员</div>
+    <div class="l2">Star Students</div>
+    <div class="l3"><img src="img/dash.png" alt=""><img class="mi" src="img/arrow.png" alt=""><img src="img/dash.png" alt=""></div>
+</div>
+
+<div class="xy">
+    <div class="xc">
+        <img src="img/xy1.jpg" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+    <div class="xc">
+        <img src="img/xy2.jpg" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+    <div class="xc">
+        <img src="img/xy3.jpg" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+    <div class="xc">
+        <img src="img/xy4.jpg" alt="">
+        <div>
+            <img src="img/hover.png" alt="">
+            <span>天美手绘学员生活</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="bt">
+
+    <div class="show">
+        <div class="l1">友情链接</div>
+        <div class="l2">Links</div>
+        <div class="l3"><img src="img/dash2.png" alt=""><img class="mi" src="img/arrow.png" alt=""><img src="img/dash2.png" alt=""></div>
+    </div>
+
+    <div class="multipleLine" style="margin:0 auto">
+        <div class="hd" style="display: none;">
+            <ul><li>1</li><li>2</li><li>3</li></ul>
+        </div>
+        <div class="bd">
+
+            <div class="ulWrap">
+
+                <ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj1.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj2.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj3.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj4.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj5.jpg" /></a></div>
+                    </li>
+                </ul>
+
+                <ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj1.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj2.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj3.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj4.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj5.jpg" /></a></div>
+                    </li>
+                </ul>
+
+                <ul><!-- 把每次滚动的n个li放到1个ul里面 -->
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj1.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj2.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj3.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj4.jpg" /></a></div>
+                    </li>
+                    <li>
+                        <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/tj5.jpg" /></a></div>
+                    </li>
+                </ul>
+            </div><!-- ulWrap End -->
+        </div><!-- bd End -->
+        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+    </div><!-- multipleLine End -->
+
+    <script type="text/javascript">
+        /*
+         多行/多列的滚动解决思路在于：把每次滚动的n个li放到1个ul里面，然后用SuperSlide每次滚动1个ul，相当于每次滚动n个li
+         */
+        jQuery(".multipleLine").slide({titCell:".hd ul",mainCell:".bd .ulWrap",autoPage:true,effect:"left"/*,autoPlay:true*/});
+    </script>
+</div>
+
+<div class="btbar">
+    <img src="img/btbar.png" alt="">
+</div>
+
+<div class="foot">
+    <div class="footc">
+        <div class="footl">
+            <div class="ftl1">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于天美</a></li>
+                    <li><a href="#">作品展示</a></li>
+                    <li><a href="#">课程体系</a></li>
+                    <li><a href="#">免费资料</a></li>
+                    <li><a href="#">网上报名</a></li>
+                    <li><a href="#">新闻动态</a></li>
+                    <li><a href="#">考研中心</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">设计承接 </a></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+            <div class="ftl2">
+                Copyright©2016 天美手绘教育学院  All Rights Reserved.  蒙ICP备000000号    网站建设：国风网络&nbsp;&nbsp;<img src="img/ll.gif" alt="">
+            </div>
+            <div class="ftl3">
+                电话：18548121101    网址：www.tianmei-art.com     地址：呼和浩特市赛罕区学苑东街林业小区9号楼4单元501
+            </div>
+        </div>
+        <div class="footr">
+            <img src="img/ewm.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footerc">
+        <div class="footer_l">
+            关键词：<a href="#">内蒙古天美手绘教育学院</a>&nbsp;&nbsp;<a href="#">呼市天美手绘教育学院</a>&nbsp;&nbsp;<a href="#">天美手绘教育学院</a>&nbsp;&nbsp;<a href="#">天美手绘</a>
+            <a href="#">软件教学</a>
+        </div>
+        <div class="footer_r">
+            share：<b><a href="#"><img src="img/xlwb.png" alt=""></a></b>|<b><a href="#"><img src="img/txwb.png" alt=""></a></b>|<a href="#"><img src="img/rrw.png" alt=""></a>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".sc").hover(
+                function(){
+                    $(this).children("div").fadeIn();
+                },
+                function(){
+                    $(this).children("div").hide();
+                }
+        );
+        $(".xc").hover(
+                function(){
+                    $(this).children("div").fadeIn();
+                },
+                function(){
+                    $(this).children("div").hide();
+                }
+        );
+        $(".ms .hd a").hover(
+                function(){
+                    $(this).css("opacity","0.5");
+                },
+                function(){
+                    $(this).css("opacity","1");
+                }
+        );
+
+
+    });
+
+</script>
+
+</body>
+</html>

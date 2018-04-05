@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--兼容IE最新标准-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式网页必须加视口属性 缩放比为：1：1-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="others.css"/>
+    <script type="text/javascript" src="img/jquery1.42.min.js"></script>
+    <script src="scbz.js"></script>
+    <title>网上报名</title>
+
+</head>
+<body>
+
+<div class="topbar">
+    <div class="topbarbj"><img src="img/topbar.png" alt=""></div>
+    <div class="topc">欢迎进入天美手绘教育学院官网网站！
+        <div>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="AddFavorite('天美手绘教育',location.href)">收藏本站</a></li>
+                <li><a>设为首页</a></li>
+                <li><a>联系我们</a></li>
+                <li><a style="border: none;">网上报名</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="logo">
+    <img src="img/logo.png" alt="">
+    <div>
+        <div class="ll">
+            <img src="img/tel.png" alt=""> &nbsp;&nbsp;
+        </div>
+        <div class="hot">
+            <div class="l1">&nbsp;&nbsp;报名热线</div>
+            <div class="l2">18548121101</div>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="navc">
+        <ul>
+            <li><a href="index.html" >首页</a></li>
+            <li><a href="gytm_bxys.html">关于天美</a></li>
+            <li><a href="zpzs.html">作品展示</a></li>
+            <li><a href="kctx.html">课程体系</a></li>
+            <li><a href="mfzl.html" >免费资料</a></li>
+            <li><a href="wsbm.html" class="ck">网上报名</a></li>
+            <li><a href="kctx.html">新闻动态</a></li>
+            <li><a href="kctx.html">考研中心</a></li>
+            <li><a href="zxns.html">联系我们</a></li>
+            <li><a href="sjcj.html">设计承接</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="gg">
+    <div id="slideBox" class="slideBox">
+        <div class="hd" style="display: none;">
+            <ul><li>1</li><li>2</li><li>3</li></ul>
+        </div>
+        <div class="qd">
+            <ul>
+                <li><a href="#" target="_blank"><img src="img/gg2.jpg" /></a></li>
+                <li><a href="#" target="_blank"><img src="img/gg2.jpg" /></a></li>
+                <li><a href="#" target="_blank"><img src="img/gg2.jpg" /></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="img/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript">
+        jQuery(".slideBox").slide({mainCell:".qd ul",effect:"left",autoPlay:true});
+    </script>
+
+    <div class="innav">
+        <b class="b1">网上报名</b>
+        <b class="b2">当前位置：首页 > 网上报名 > 报名系统 </b>
+    </div>
+</div>
+
+<div class="innavc">
+    开设专业：景观手绘基础+提高、室内手绘基础+提高、城规手绘基础+提高、建筑手绘基础加提高及各专业考研和专升本快题。景观、建筑、城规、室内从效果图表现到漫游动画的软件教学。
+</div>
+
+<div class="tnav">
+    <div class="tnavc">
+      <!--  <select class="ck">
+            <option>报名系统</option>
+            <option>报名系统</option>
+            <option>报名系统</option>
+        </select>
+        <select>
+            <option>招生简章</option>
+            <option>招生简章</option>
+            <option>招生简章</option>
+        </select>-->
+        <a href="" class="ck">报名系统&nbsp;&nbsp;<img src="img/ds.png" alt=""></a>
+        <a href="">招生简章&nbsp;&nbsp;<img src="img/dsb.png" alt=""></a>
+    </div>
+</div>
+
+    <form action="">
+        <div class="bmct">
+            <div class="step">
+                <img src="img/step.png" alt="">
+                <div>第一步</div>
+            </div>
+
+            <div class="stepc1">
+                <div class="bjdd">
+                    <img src="img/bjdd.png" alt="">
+                    &nbsp;&nbsp;班级地点：
+                    <div class="dd">
+                        <a class="ddck"><img src="img/ddck.png" alt="">&nbsp;&nbsp;呼市</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;郑州</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;成都</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;青岛</a>
+                    </div>
+                    <img src="img/wh.png" alt="">&nbsp;&nbsp;请选择您的班级地点
+                </div>
+
+                <div class="xbzy">
+                    <img src="img/xbzy.png" alt="">
+                    &nbsp;&nbsp;选报专业：
+                    <div class="zy">
+                        <a class="zyck"><img src="img/ddck.png" alt="">&nbsp;&nbsp;建筑设计</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;城市规划</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;风景园林</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;室内设计</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <img src="img/step.png" alt="">
+                <div>第二步</div>
+            </div>
+
+            <div class="stepc2">
+                <div class="nr_l">
+                    <div class="item">
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>&nbsp;&nbsp;<input type="text">
+                    </div>
+                    <div class="item">
+                        <span>就读学校：</span>&nbsp;&nbsp;<input type="text">
+                    </div>
+                    <div class="item">
+                        <span>在校专业：</span>&nbsp;&nbsp;<input type="text">
+                    </div>
+                    <div class="item">
+                        <span>手机号码：</span>&nbsp;&nbsp;<input type="text">
+                    </div>
+                    <div class="item">
+                        <span>了解我们：</span>
+                        <a class="ddck"><img src="img/ddck.png" alt="">&nbsp;&nbsp;搜索引擎</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;同学介绍</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;课题讲座</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;其他</a>
+                    </div>
+                </div>
+                <div class="nr_r">
+                    <div class="item">
+                        <span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+                        <a class="ddck"><img src="img/ddck.png" alt="">&nbsp;&nbsp;男</a>
+                        <a><img src="img/dd.png" alt="">&nbsp;&nbsp;女</a>
+                    </div>
+                    <div class="item">
+                        <span>在校年级：</span>&nbsp;&nbsp;<input type="text">
+                    </div>
+                    <div class="item">
+                        <span>在校职务：</span>&nbsp;&nbsp;<input type="text">
+                    </div>
+                    <div class="item">
+                        <span>Q  Q号码：</span>&nbsp;&nbsp;<input type="text">
+                    </div>
+                    <div class="item">
+                        <span>在校年级：</span>&nbsp;&nbsp;
+                        <select name="" id="">
+                            <option value="">春季手绘周末提高班</option>
+                            <option value="">春季手绘周末提高班</option>
+                            <option value="">春季手绘周末提高班</option>
+                            <option value="">春季手绘周末提高班</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="xqah">
+                <div class="item">
+                    <span>兴趣爱好：</span>&nbsp;&nbsp;<input type="text">
+                </div>
+                <div class="ahnr">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="itemc">
+                    <span>兴趣爱好：</span>&nbsp;&nbsp;<input type="text"><b>验证码位置</b><button>点击更换验证</button>
+                </div>
+                <div class="btn">
+                    <a class="sub">提交</a><a class="ret">重置</a>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <img src="img/step.png" alt="">
+                <div>第三步</div>
+            </div>
+
+            <div class="stepc3">
+                附注：填写提交完报名信息后需到银行转账交付座位预留金300元以确定报名信息。 并保留汇款单据现场报到的时候需上交
+
+                汇款成功后，请发短信至 18937121286   确认汇款信息! <br>
+
+                <div class="stepc3_l">
+                    中国工商银行 郑州市南阳路支行 <br>
+                    户　名：孟 聪<br>
+                    卡　号：6222 0817 0200 6949 017<br>
+                    支付宝账号：363792660@qq.com<br>
+                </div>
+                <div class="stepc3_r">
+                    中国建设银行<br>
+                    户　名：孟 聪<br>
+                    卡　号：6227 0024 3005 0378 462<br>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+<div class="btbar">
+    <img src="img/btbar.png" alt="">
+</div>
+
+<div class="foot">
+    <div class="footc">
+        <div class="footl">
+            <div class="ftl1">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于天美</a></li>
+                    <li><a href="#">作品展示</a></li>
+                    <li><a href="#">课程体系</a></li>
+                    <li><a href="#">免费资料</a></li>
+                    <li><a href="#">网上报名</a></li>
+                    <li><a href="#">新闻动态</a></li>
+                    <li><a href="#">考研中心</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">设计承接 </a></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+            <div class="ftl2">
+                Copyright©2016 天美手绘教育学院  All Rights Reserved.  蒙ICP备000000号    网站建设：国风网络&nbsp;&nbsp;<img src="img/ll.gif" alt="">
+            </div>
+            <div class="ftl3">
+                电话：18548121101    网址：www.tianmei-art.com     地址：呼和浩特市赛罕区学苑东街林业小区9号楼4单元501
+            </div>
+        </div>
+        <div class="footr">
+            <img src="img/ewm.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footerc">
+        <div class="footer_l">
+            关键词：<a href="#">内蒙古天美手绘教育学院</a>&nbsp;&nbsp;<a href="#">呼市天美手绘教育学院</a>&nbsp;&nbsp;<a href="#">天美手绘教育学院</a>&nbsp;&nbsp;<a href="#">天美手绘</a>
+            <a href="#">软件教学</a>
+        </div>
+        <div class="footer_r">
+            share：<b><a href="#"><img src="img/xlwb.png" alt=""></a></b>|<b><a href="#"><img src="img/txwb.png" alt=""></a></b>|<a href="#"><img src="img/rrw.png" alt=""></a>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(".stepc1 a").click(
+                function(){
+                    $(this).toggleClass('ddck');
+                    $(this).children("img").attr('src', 'img/ddck.png');
+                    $(this).siblings().children("img").attr('src', 'img/dd.png');
+                }
+        );
+
+        $(".item a").click(
+                function(){
+                    $(this).toggleClass('ddck');
+                    $(this).children("img").attr('src', 'img/ddck.png');
+                    $(this).siblings().children("img").attr('src', 'img/dd.png');
+                }
+        );
+
+    });
+
+</script>
+
+
+</body>
+</html>
