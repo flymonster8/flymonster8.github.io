@@ -1,0 +1,14 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+a,a:hover{text-decoration: none;}
+input{border:none;background: none;}
+body {
+    background: #fdfdfd;
+    font-family: "Microsoft YaHei";
+    margin: 0;
+    padding: 0;
+}
+.ewmbj{width: 60%;margin: 10% auto;}
+.ewmbj img{width: 100%;}

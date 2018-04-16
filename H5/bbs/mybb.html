@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>我的宝宝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <link href="ayc/jysc.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="ayc/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+<div class="jstx"><img src="ayc/txsc.png" alt=""/></div>
+<div class="tit">宝宝昵称&nbsp;<span>*</span></div>
+<input class="tic" contenteditable="true"/>
+
+<div class="tit">性别&nbsp;<span>*</span></div>
+<div class="tic1" >
+    <div class="nbb"><!--<img src="ayc/nwbb.png" alt=""/>--><img src="ayc/nbb.png" alt=""/>&nbsp;&nbsp;男宝宝</div>
+    <p>&nbsp;</p>
+    <div class="nvbb"><img src="ayc/nvbb.png" alt=""/>&nbsp;&nbsp;女宝宝</div>
+</div>
+
+<div class="tit">出生日期&nbsp;<span>*</span></div>
+<div class="til">
+    <div>
+        <select name="" id="">
+            <option value="">2014</option>
+            <option value="">2015</option>
+            <option value="">2016</option>
+        </select>
+    </div>
+    <p>&nbsp;</p>
+    <div>
+        <select name="" id="">
+            <option value="">01</option>
+            <option value="">02</option>
+            <option value="">03</option>
+        </select>
+    </div>
+    <p>&nbsp;</p>
+    <div>
+        <select name="" id="">
+            <option value="">01</option>
+            <option value="">02</option>
+            <option value="">03</option>
+        </select>
+    </div>
+</div>
+
+<div class="tit">所在地&nbsp;<span>*</span></div>
+<div class="til">
+    <div>
+        <select name="" id="">
+            <option value="">北京</option>
+            <option value="">内蒙古</option>
+            <option value="">上海</option>
+        </select>
+    </div>
+    <p>&nbsp;</p>
+    <div>
+        <select name="" id="">
+            <option value="">北京</option>
+            <option value="">呼和浩特</option>
+            <option value="">上海</option>
+        </select>
+    </div>
+    <p>&nbsp;</p>
+    <div>
+        <select name="" id="">
+            <option value="">海淀区</option>
+            <option value="">玉泉区</option>
+            <option value="">静安区</option>
+        </select>
+    </div>
+</div>
+
+<div class="tit">
+    <div>身高/cm</div>
+    <p>&nbsp;</p>
+    <div>体重/kg</div>
+</div>
+<div class="tic1" >
+    <input type="text"/>
+    <p>&nbsp;</p>
+    <input type="text"/>
+</div>
+
+<div class="tit">父/母姓名&nbsp;<span>*</span></div>
+<input class="tic" contenteditable="true"/>
+
+<div class="tit">父/母手机号&nbsp;<span>*</span></div>
+<input class="tic" contenteditable="true"/>
+
+<div class="tit">成长宣言&nbsp;<span>*</span></div>
+<textarea class="tic2" contenteditable="true" >不超过50字</textarea>
+
+<div class="sure">确&nbsp;&nbsp;认</div>
+
+
+<!--成功弹层-->
+<div class="tcb hid" >
+    <div class="bsc">
+        <div class="cgtx"><img src="ayc/xbb.png" alt=""/></div>
+        <div class="bswz">上传成功</div>
+        <div class="bsid">（宝宝ID：123456789）</div>
+        <div class="bsbk">返回</div>
+    </div>
+</div>
+
+<script>
+    var pop= $('.tcb');
+    $(document).ready(function(){
+        $('.sure').click(function(){
+            pop.fadeIn();
+        });
+        $('.bsbk').click(function(){
+            pop.fadeOut();
+        });
+
+
+    });
+</script>
+
+</body>
+</html>

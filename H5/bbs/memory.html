@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>宝宝记忆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="ayc/style.css" />
+    <link rel="stylesheet" href="ayc/pignose.tab.min.css" />
+    <link rel="stylesheet" href="ayc/swiper.min.css">
+    <script type="text/javascript" src="ayc/jquery-1.7.2.min.js"></script>
+
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background:#f1f1f1;
+            font-family: "Microsoft YaHei";
+            font-size: 100%;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        a{text-decoration: none;}
+
+
+        .swiper-container {
+            width: 100%;
+            /*height: 100%;*/
+            height: 30%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+        .swiper-slide img{width: 100%;}
+        .swiper-button-prev{background-image:url("ayc/prev.png");}
+        .swiper-button-next{background-image:url("ayc/next.png");}
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 100%;
+            background: #6a8ea5;
+            opacity: .6;
+        }
+        .swiper-pagination-bullet-active{    opacity: 1;  background: #92d989;}
+
+        .ci{width: 100%;background:url("ayc/pb.png") no-repeat;background-size:cover; }
+        .ctt{width: 100%;padding-left: 10%;z-index: 100;}
+        .ctl{width: 28%;float: left;margin-right: 10%;}
+        .ctl img{width: 100%;border-radius: 50%;}
+        .ctr{width: 45%;float: left;color: #2dcb83;}
+        .ctb{width:5%;float: left; }
+        .ctb a{height: auto;}
+        .pignose-tab-group .fgx{  float: left;  }
+        .pignose-tab-response .pignose-tab-group a{color: #555;}
+
+        .add{width: 100%;text-align: center;height: auto;z-index: 50;}
+        .chd{width: 100%;text-align: center;color: #76d461;padding-right:4%;}
+        .rd{width: 100%;padding-left:4%;text-align: center;margin: 0 auto;}
+        .rd a{width: 66%;display: block;background: url("ayc/cam.png")no-repeat;background-position: left;background-size: 15% 60%;margin: 0 auto;}
+
+
+        .rct{width: 100%;height: auto;}
+        .rct div{text-align: center;}
+        .rct>div{width: 100%;float: left;background: #fff;border-left: 1px solid #e2e2e2;color: #808080;}
+        .rct>div>div{width: 33.3%;float: left;border-bottom: 1px solid #e2e2e2;border-right: 1px solid #e2e2e2;}
+        .rctt{width: 100%;background: #f2ffef!important;color: #55a743!important;border-top: 1px solid #e2e2e2;}
+
+        .btoa{width: 100%;position: fixed;bottom: 0;left: 0;background: #76d461;z-index: 50;}
+        .btoa a{width: 22%;display: block;float: left;text-align: center;color: #fff;}
+        .btoa div{border-right: 1px solid #fff;}
+        .bts{width: 34%!important;}
+
+        @media screen and (max-width: 4096px) and (min-width: 801px) {
+            .ci{height: 23.75rem;}
+            .ctt{height: 23.75rem;font-size: 2rem;}
+            .ctl{height: 23.75rem;}
+            .ctl img{height: 16.75rem;margin: 3.5rem 0 3.5rem 0;}
+            .ctr{height: 23.75rem;line-height: 3rem;padding: 5rem 0 4rem 0;}
+            /**/
+            .pignose-tab-group .fgx{   height: 68px;line-height: 68px;margin-top: 30px; }
+            .pignose-tab-response .pignose-tab-group a{font-size: 1.75rem;height: 8rem;  line-height: 8rem;}
+            .pignose-tab-wrapper .pignose-tab-container{top: 8rem;}
+            /**/
+            .ctb {margin:0 0 0 1rem; }
+            .ctb img{margin:15rem 0 0 0; }
+            .add{position: absolute;left:8%;top: 0;}
+            .chd{height: 6rem;line-height: 6rem;font-size:2.25rem ;margin: .2rem 0 0 0;}
+            .rd {height: 6rem;line-height: 6rem;font-size:2.25rem ;}
+            .rd a{height: 6rem!important;line-height: 6rem!important;font-size:2.25rem!important;}
+            .swiper-button-next, .swiper-button-prev {top: 2%!important;  width: 18px;  height: 30px;  -moz-background-size: 18px 30px;  -webkit-background-size: 18px 30px;  background-size: 18px 30px;  }
+            .rct{margin-top: 32px;}
+            .rct>div>div{height: 7.625rem;line-height: 7.625rem;font-size: 2.25rem;}
+
+            .btoa{height:8.25rem;line-height:8.25rem;}
+            .btoa a{font-size:2.875rem;}
+            .btoa div{height: 68px;;line-height: 68px;margin: 32px 0 32px 0;}
+        }
+
+        @media screen and (max-width: 800px) and (min-width: 491px) {
+            .ci{height: 15.625rem;}
+            .ctt{height: 15.625rem;font-size: 1.5rem;}
+            .ctl{height: 15.625rem;}
+            .ctl img{height: 12.625rem;margin: 1.5rem 0 1.5rem 0;}
+            .ctr{height: 15.625rem;line-height: 2rem;padding: 4rem 0 4rem 0;}
+            .pignose-tab-group .fgx{   height: 46px;line-height: 46px;margin-top: 17px; }
+            .pignose-tab-response .pignose-tab-group a{font-size: 1.5rem;height: 5.5rem;  line-height: 5.5rem;}
+            .pignose-tab-wrapper .pignose-tab-container{top: 5.5rem;}
+            /**/
+            .ctb {margin:0 0 0 1rem; }
+            .ctb img{margin:10rem 0 0 0; }
+            .add{position: absolute;left:8%;top: 0;}
+            .chd{height: 4rem;line-height: 4rem;font-size:1.6rem ;margin: .2rem 0 0 0;}
+            .rd {height: 4rem;line-height: 4rem;font-size:1.4rem ;}
+            .rd a{height: 4rem!important;line-height: 4rem!important;font-size:1.4rem!important ;}
+            .swiper-button-next, .swiper-button-prev {top: 2%!important;  width: 18px;  height: 30px;  -moz-background-size: 18px 30px;  -webkit-background-size: 18px 30px;  background-size: 18px 30px;  }
+            .rct{margin-top: 20px;}
+            .rct>div>div{height: 5rem;line-height: 5rem;font-size: 1.5rem;}
+
+            .btoa{height:5.625rem;line-height:5.625rem;}
+            .btoa a{font-size: 2rem;}
+            .btoa div{height: 46px;;line-height: 46px;margin: 22px 0 22px 0;}
+        }
+
+        @media screen and (max-width: 490px) and (min-width: 319px) {
+            .ci{height: 10rem;}
+            .ctt{height: 10rem;font-size: .75rem;}
+            .ctl{height: 10rem;}
+            .ctl img{height: 6rem;  margin: 2rem 0 2rem 0;}
+            .ctr{height: 10rem;line-height: 1.2rem;padding: 3rem 0 2rem 0;}
+            .ctb{height: 10rem;}
+            .pignose-tab-group .fgx{   height: 20px;line-height: 20px;margin-top: 12px; }
+            .pignose-tab-response .pignose-tab-group a{font-size: .75rem;  height: 2.8rem;  line-height: 2.8rem;}
+            .pignose-tab-wrapper .pignose-tab-container{top: 2.8rem;}
+            .ctb {margin:0 0 0 1rem; }
+            .ctb img{margin:5rem 0 0 0; }
+            .add{position: absolute;left:8%;top: 0;}
+            .chd{height: 2.375rem;line-height: 2.375rem;font-size:.75rem ;margin: .2rem 0 0 0;}
+            .rd {height: 2.375rem;line-height: 2.375rem;font-size:.75rem ;}
+            .rd a{height: 2.375rem!important;line-height: 2.375rem!important;font-size:.75rem!important;}
+            .swiper-button-next, .swiper-button-prev { top: 2%!important; width: 14px;  height: 22px;  -moz-background-size: 14px 22px;  -webkit-background-size: 14px 22px;  background-size: 14px 22px;  }
+            .rct{margin-top: 10px;}
+            .rct>div>div{height: 2.25rem;line-height: 2.25rem;font-size: .75rem;}
+
+            .btoa{height:2.5rem;line-height:2.5rem;}
+            .btoa a{font-size: .875rem;}
+            .btoa div{height: 22px;;line-height: 22px;margin: 9px 0 9px 0 ;}
+        }
+
+
+        #wrapper {
+
+        }
+        .article {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .article table {
+            font-size: 115%;
+            text-align: left;
+        }
+        .article pre {
+            font-size: 115%;
+        }
+
+        .tab { width: 100%; margin: 0 auto; padding: 5px; }
+        .nav.tab { width: auto; max-width: 100%; margin: 0; border: 0; padding: 0; border-bottom: 1px solid #ddd; }
+        .pignose-sub-tab { border: 0; margin: 0; padding: 0;}
+        .table { width: 100%; table-layout: fixed; }
+        .table .subject { text-align: left; padding-left: 5%; }
+        .table .date { text-align: right; padding-right: 5%; }
+    </style>
+</head>
+<body>
+<div  class="ci">
+    <div class="ctt">
+        <div class="ctl"><img src="ayc/tx.png" alt=""/></div>
+        <div class="ctr">我是小土豆，我今年5岁了我想快快长大~~</div>
+        <div class="ctb"><a href=""><img src="ayc/change.png" alt=""/></a></div>
+    </div>
+</div>
+<!--border-radius: 50%;
+        box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);-->
+<div id="wrapper">
+    <div class="article">
+        <div class="tab pignose-tab-response pignose-tab-responsive-btn tab">
+            <ul>
+                <li>
+                    <a href="#">时光轴</a>
+                    <div>
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="add">
+                                        <div class="chd">2016.02</div>
+                                        <div class="rd"><a href="">记录更多宝宝成长空间</a></div>
+                                    </div>
+                                    <section id="cd-timeline" class="cd-container">
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div>
+                                                    <img src="ayc/tu3.png" alt=""/><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/>
+                                                   <!-- <img src="ayc/6.jpg" alt=""/><img src="ayc/12.jpg" alt=""/><img src="ayc/111.jpg" alt=""/>
+                                                    <img src="ayc/tu3.png" alt=""/><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/>-->
+                                                </div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="add">
+                                        <div class="chd">2016.03</div>
+                                        <div class="rd"><a href="">记录更多宝宝成长空间</a></div>
+                                    </div>
+                                    <section id="cd-timeline" class="cd-container">
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="add">
+                                        <div class="chd">2016.04</div>
+                                        <div class="rd"><a href="">记录更多宝宝成长空间</a></div>
+                                    </div>
+                                    <section id="cd-timeline" class="cd-container">
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img ">
+                                                <img src="ayc/pr.png" alt=""/>
+                                                04.01
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <h2>今天第一次叫妈妈~小土豆，你真棒，加油~加油~</h2>
+                                                <div><img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/></div>
+                                                <div class="cd-read-more"><a href=""  target="_blank"><img src="ayc/sharen.png" alt=""/>&nbsp;</a>
+                                                    <img src="ayc/ct.png" alt=""/>（20）</div>
+                                                <span class="cd-date"><img class="img1" src="ayc/sg.png" alt=""/>36.8<img class="img2" src="ayc/tz.png" alt=""/>12.3kg</span>
+                                                <ul>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~</li>
+                                                    <li>小辣椒：番茄酱真棒~hahahahahahahahahahahahahahahah</li>
+                                                    <li><a href=""><div style="">查看全部评论</div></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                </div>
+
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </li>
+                <div style="width: 1px;background: #808080;" class="fgx">&nbsp;</div>
+                <li>
+                    <a href="#">我的参赛</a>
+                    <div>
+                        <div class="rct">
+                            <div class="rctt">
+                                <div>投票</div>
+                                <div>名次</div>
+                                <div>报名时间</div>
+                            </div>
+                            <div>
+                                <div>幸福宝宝秀</div>
+                                <div>2</div>
+                                <div>2016-04-14</div>
+                            </div>
+                            <div>
+                                <div>幸福宝宝秀</div>
+                                <div>2</div>
+                                <div>2016-04-14</div>
+                            </div>
+                            <div>
+                                <div>幸福宝宝秀</div>
+                                <div>88</div>
+                                <div>2016-04-14</div>
+                            </div>
+                            <div>
+                                <div>幸福宝宝秀</div>
+                                <div>未通过</div>
+                                <div>2016-04-14</div>
+                            </div>
+                            <div>
+                                <div>最萌宝宝秀</div>
+                                <div>待审核</div>
+                                <div>2016-04-14</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <div style="width: 1px;background: #808080;" class="fgx">&nbsp;</div>
+               <!-- <li>
+                    <a href="tp.html">看其他人</a>
+                    <div>
+                        Content3
+                    </div>
+                </li>-->
+                <a href="others.html">看其他人</a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="btoa">
+    <a href="">
+        <div>回首页</div>
+    </a>
+    <a href="">
+        <div>分享</div>
+    </a>
+    <a href="">
+        <div>留言板</div>
+    </a>
+    <a href="" class="bts">
+        喜欢（30000）
+    </a>
+</div>
+
+
+<script type="text/javascript" src="ayc/pignose.tab.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.tab').pignoseTab({
+            animation: true,
+            children: '.tab'
+        });
+    });
+</script>
+
+<!-- Swiper JS -->
+<script src="ayc/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 50
+    });
+</script>
+</body>
+</html>

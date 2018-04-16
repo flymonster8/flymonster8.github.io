@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>物流地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <link href="ayc/wldz.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="ayc/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+
+<div class="tit">所在地</div>
+<div class="til">
+    <div>北京市</div>
+    <p>&nbsp;</p>
+    <div>北京市</div>
+    <p>&nbsp;</p>
+    <div>海淀区</div>
+</div>
+<div class="tit">详细地址</div>
+<input type="text" class="tic"/>
+<div class="tit">收件人姓名</div>
+<input type="text" class="tic"/>
+<div class="tit">手机号码</div>
+<input type="text" class="tic"/>
+<div class="sure">确&nbsp;&nbsp;认</div>
+
+<script>
+    var pop= $('.tcb');
+    $(document).ready(function(){
+        $('.tj').click(function(){
+            pop.fadeIn();
+        });
+        $('.cancels').click(function(){
+            pop.fadeOut();
+        });
+
+
+    });
+</script>
+
+</body>
+</html>

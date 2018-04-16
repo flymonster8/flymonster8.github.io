@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--兼容IE最新标准-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式网页必须加视口属性-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title></title>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .outBox2{
+            display: table;
+            height: 400px;
+            width:100%;
+            *position: relative;
+            overflow: hidden;
+            background:#FFCCCC;
+            border: 1px solid #d00;
+        }
+        .midBox2{
+            *position: absolute;
+            *top: 50%;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .innBox2{
+            *position: relative;
+            *top: -50%;
+            width:100%;
+            margin:0 auto;
+            border:1px solid #c00;
+        }
+        .innBox2 img{ display: inline-block; }
+    </style>
+</head>
+<body>
+<div class="outBox2">
+    <div class="midBox2">
+        <div class="innBox2">
+            <img src="ayc/tu1.png" alt=""/><img src="ayc/tu2.png" alt=""/><img src="ayc/tu3.png" alt=""/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

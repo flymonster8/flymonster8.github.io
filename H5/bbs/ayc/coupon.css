@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+
+*{margin:0;padding: 0;}
+input{border: none;}
+body {  background: #f1f1f1;  font-family: "Microsoft YaHei";  font-size: 100%;  color: #000;  margin: 0;  padding: 0;  }
+a {  text-decoration: none;  }
+img {  width: 100%;  }
+.mycp{width: 90%;background: #fff;color: #4c4c4c;display: block;margin: 3% auto 8% auto;text-align: center;border: 1px solid #e2e2e2;}
+.cp{width: 90%;margin: 0 auto 3% auto;background: url("coupon.png") no-repeat;background-size: 100%; }
+.mcp{width: 90%;margin: 0 auto 3% auto;background: url("mcp.png") no-repeat;background-size: 100%; }
+.cpinfo{width: 100%; color: #fff;}
+.cpinfo div{float: left;}
+.cpil{width: 73%;text-align: left;margin-left: 8%;}
+.cpil div{width: 100%;}
+.cpir{width: 19%;display: table-cell;vertical-align: middle;text-align: center;}
+.cpir:after{clear: left;}
+.cpir img{vertical-align: middle;}
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+    .mycp{height: 126px;line-height: 126px;border-radius: 20px;font-size: 46px;}
+    .cp,.mcp{height: 310px; }
+    .cpinfo,.cpil,.cpir{height: 296px;line-height: 296px;}
+    .cpill,.cpilr{height: 148px;line-height: 148px;font-size: 76px;}
+    .rt1{height: 70px;line-height: 70px;font-size: 39px;}
+    .rt2{height: 45px;line-height: 45px;font-size: 26px;}
+    .cpir img{width: 40px;height:170px; }
+
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+    .mycp{height: 84px;line-height: 84px;border-radius: 10px;font-size: 28px}
+    .cp,.mcp{height: 210px; }
+    .cpinfo,.cpil,.cpir{height: 202px;line-height: 202px;}
+    .cpill,.cpilr{height: 101px;line-height: 101px;font-size: 48px;}
+    .rt1{height: 50px;line-height: 50px;font-size: 28px;}
+    .rt2{height: 33px;line-height: 33px;font-size: 18px;}
+    .cpir img{width: 26px;height:116px; }
+
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+    .mycp{height: 38px;line-height: 38px;border-radius: 5px;font-size: 14px;}
+    .cp,.mcp{height: 92px; }
+    .cpinfo,.cpil,.cpir{height: 84px;line-height: 84px;}
+    .cpill,.cpilr{height: 42px;line-height: 42px;font-size: 22px;}
+    .rt1{height: 21px;line-height: 21px;font-size: 12px;}
+    .rt2{height: 14px;line-height: 14px;font-size: 8px;}
+    .cpir img{width: 12px;height:52px; }
+
+
+}

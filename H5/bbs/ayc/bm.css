@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family: "Microsoft YaHei";font-size:12px;   background: #f1f1f1;}
+*{ margin:0; padding:0}
+a{ color:#333; text-decoration:none; outline:none}
+em{ font-style:normal}
+img{ border: none;width: 100%;}
+input{ vertical-align:middle; border: none;}
+ul{ list-style:none}
+.clear{ font-size:0; clear:both}
+/**************************************************/
+.panel{  width:90%;  height:auto;  margin:8% auto 0 auto;  }
+.content{  width: 100%;  margin-top:3%;  height:auto;  }
+.list li,.list1 li{ float:left;width:28%;  position:relative;}
+.list li{  border:1px dashed #979797;background:#F8F8F6;}
+.list1 li{ border:1px dashed #76d461;background:#d8ebd4;}
+.list li img,.list1 li img{  margin: 0 auto; position:absolute; right:0; top:0;}
+.list li span,.list1 li span{ display:block; position:absolute;  background:url(del.png) no-repeat;background-size: 100%;}
+.list li input,.list1 li input{ display:block; width:100%; text-align:center; }
+.list li input{ background:#e8e8e8 url(add.png) no-repeat center; background-size: 50%;}
+.list1 li input{ background:#d8ebd4 url(gadd.png) no-repeat center; background-size: 50%;}
+.file{ position:absolute; top:0; right: 0;width:100%;  filter:alpha(opacity:0);opacity: 0; }
+
+.tj,.cancels{ width:100%; position: absolute;bottom: 0;left: 0;  text-align:center;color: #fff;}
+.tj{ background: #76d461;}
+.cancels{ background: #ff8b9b;}
+
+.hid{display: none;}
+.tcb,.tcm{width: 100%;height: 100%;background: rgba(0,0,0,0.9);position: fixed;top: 0;left:0;z-index:30;color: #fff;overflow:scroll;}
+
+.tpt,.tpt1{width: 100%;text-align: center; }
+.tpt1{margin-top:3%;}
+.tshort{width: 70%;margin: 5% auto 4% auto;}
+.tshort1{width: 70%;margin: 2% auto 4% auto;}
+
+
+.is{width: 80%;margin:0 auto 5% auto;background: #76d461;display: block;color: #fff;}
+.is>div{float: left;}
+.tp {text-align: right;width: 40%;margin-right: 5%;}
+.tp::after {clear: left;}
+.tp img{display: inline;vertical-align: middle;/*float: right;*/}
+.isc {text-align: left;width: 55%;}
+.tips{width: 80%;}
+.ggw{width: 80%;margin:0 auto 18% auto;}
+.ggw a{width: 100%;height: auto;display: block;}
+
+/*add*/
+.infoc{width: 80%;margin: 6% auto 4% auto;display: block;background:#fff;padding: 0 4%;border: 1px solid #dcdcdc;}
+.infos{width: 60%;margin: 2% auto 15% auto;background: #76d461;text-align: center;}
+
+.jstx{width: 100%;margin:10% auto 0 auto;/*display: table-cell;*/vertical-align: middle;text-align: center;clear: left;}
+.jstx img{vertical-align: middle;}
+
+.db{width: 100%;position: absolute;left: 0;bottom: 20%;}
+.tic,.tic1,.tic2,.tit,.til,.til1{width: 90%;margin: 0 auto;}
+.til,.til1{color: #d4d4d4;}
+.til div{width: 31%;float: left;text-align: center;}
+.til1 div{width: 31%;float: left;}
+.zx{background: url("photo.png") no-repeat right;background-size: 100%;}
+.xc{background: url("photos.png") no-repeat right;background-size: 100%;}
+.mry{background:url("mry.png") no-repeat right;background-size: 100%;}
+.til input,.til1 input{display: block;width: 31%;float: left;background: #fff url("sel.png") no-repeat right;border: 1px solid #e2e2e2;background-size: 35%;text-indent:2%;}
+.til p,.til1 p{width: 2.4%;float: left;}
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+	.list,.list1{ height:392px;}
+	.list li,.list li input, .file,.list li img,.list1 li,.list1 li input, .file,.list1 li img{  height:390px;}
+	.list li span,.list1 li span{  width:64px; height:64px; right:-32px; top:-32px;}
+
+	.tj,.cancels{  height:132px;line-height: 132px;font-size: 46px;}
+
+	.tpt{height:9rem;line-height: 9rem; font-size: 88px; margin-top:18%;}
+	.tpt1{height:9rem;line-height: 9rem; font-size: 88px; }
+	.tshort,.tshort1{line-height: 50px;font-size: 30px;}
+	.is {height: 122px;line-height: 122px;text-align: center;border-radius: 20px;}
+	.is>div{height: 122px;line-height: 122px;}
+	.tp img{width: 64px;}
+	.isc{font-size:2.75rem; }
+	.tips{margin:10% auto 4% auto;font-size:1.75rem;}
+
+	.infoc,.infos,.intips{height: 92px;line-height: 92px;border-radius: 20px;}
+	.infoc,.intips{font-size: 2.25rem;}
+
+	.jstx{height: 248px;line-height: 248px;}
+	.jstx img{width:218px;height: 218px;}
+
+
+	.til1,.til1 div, .til1 p{height: 420px;line-height: 420px;}
+	.til,.til div,.til p{height: 122px;line-height: 122px;font-size: 42px;}
+	.til div,.til1 div{border-radius: 20px;}
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+	.list,.list1{ height:262px;}
+	.list li,.list li input, .file,.list li img,.list1 li,.list1 li input, .file,.list1 li img{  height:260px;}
+	.list li span,.list1 li span{  width:40px; height:40px; right:-20px; top:-20px;}
+
+	.tj,.cancels{  height:88px;line-height: 88px;font-size: 28px;}
+
+	.tpt{height:6rem;line-height: 6rem; font-size: 60px; margin-top:4%;}
+	.tpt1{height:6rem;line-height: 6rem; font-size: 60px; }
+	.tshort,.tshort1{line-height: 38px;font-size: 22px;}
+	.is {height: 82px;line-height: 82px;text-align: center;border-radius: 10px;}
+	.is>div{height: 82px;line-height: 82px;}
+	.tp img{width: 42px;}
+	.isc{font-size:1.75rem; }
+	.tips{margin:4% auto 4% auto;font-size:1.125rem;}
+
+	.infoc,.infos,.intips{height: 62px;line-height: 62px;border-radius: 10px;}
+	.infoc,.intips{font-size: 1.5rem;}
+
+	.jstx{height: 168px;line-height: 168px;}
+	.jstx img{width:140px;height: 140px;}
+
+	.til1,.til1 div, .til1 {height: 228px;line-height: 228px;}
+	.til,.til div,.til p{height: 82px;line-height: 82px;font-size: 28px;}
+	.til div,.til1 div{border-radius: 10px;}
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+	.list,.list1{ height:118px;}
+	.list li,.list li input, .file,.list li img,.list1 li,.list1 li input, .file,.list1 li img{  height:116px;}
+	.list li span,.list1 li span{  width:20px; height:20px; right:-10px; top:-10px;}
+
+	.tj,.cancels{  height:40px;line-height: 40px;font-size: 14px;}
+
+	.tpt{height:3rem;line-height: 3rem; font-size: 26px;margin-top:18%; }
+	.tpt1{height:3rem;line-height: 3rem; font-size: 26px;}
+	.tshort,.tshort1{line-height: 20px;font-size: 10px;}
+	.is {height: 38px;line-height: 38px;text-align: center;border-radius: 5px;}
+	.is>div{height: 38px;line-height: 38px;}
+	.tp img{width: 20px;}
+	.isc{font-size:.875rem; }
+	.tips{margin:4% auto 4% auto;font-size: .75rem;}
+
+	.infoc,.infos,.intips{height: 38px;line-height: 38px;border-radius: 5px;}
+	.infoc,.intips{font-size: .75rem;}
+
+	.jstx{height: 80px;line-height: 80px;}
+	.jstx img{width:66px;height: 66px;}
+
+    .til1,.til1 div, .til1 p{height: 122px;line-height: 122px;}
+	.til,.til div,.til p{height: 38px;line-height: 38px;font-size: 14px;}
+	.til div,.til1 div{border-radius: 5px;}
+
+}

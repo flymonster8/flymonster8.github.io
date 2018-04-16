@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+
+*{margin:0;padding: 0;}
+input{border: none;}
+body {  background: #f1f1f1;  font-family: "Microsoft YaHei";  font-size: 100%;   margin: 0;  padding: 0;  }
+a {  text-decoration: none;  }
+img {  width: 100%;  }
+.cpbj{width: 100%;background: #f8f8f8;margin-bottom: 8%;text-align: center;}
+.cpbj a{width: 49.5%;display: block;float: left;color: #4c4c4c;}
+.scp{border-right: 1px solid  #f1f1f1;}
+.smcp{border-left: 1px solid  #f1f1f1;}
+.zt{width: 92%;margin: 0 auto 4% auto;}
+
+
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+    .cpbj,.scp,.smcp{height:130px;line-height:130px;font-size: 2.625rem;}
+    .zt img{border-radius: 20px; }
+
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+    .cpbj,.scp,.smcp{height:88px;line-height: 88px;font-size: 2rem;}
+    .zt img{border-radius: 10px;}
+
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+    .cpbj,.scp,.smcp{height:40px;line-height: 40px;font-size: .875rem;}
+    .zt img{border-radius: 5px;}
+
+
+
+}

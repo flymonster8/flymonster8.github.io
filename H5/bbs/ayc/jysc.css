@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family: "Microsoft YaHei";font-size:12px;   background: #f1f1f1;}
+*{ margin:0; padding:0}
+a{ color:#333; text-decoration:none; outline:none}
+img{ border: none;width: 100%;}
+input{ vertical-align:middle; border: none;}
+ul{ list-style:none}
+.clear{ font-size:0; clear:both}
+
+
+
+/**********************wldz****************************/
+
+.tic,.tic1,.tic2,.tit,.til{width: 90%;margin: 0 auto;}
+.tit{color: #808080;}
+.til{color: #d4d4d4;}
+.tic,.tic2{display: block;background: #fff;border: 1px solid #e2e2e2;}
+.tic2{overflow: scroll;}
+.til div{width: 31%;float: left;/*background: #fff url("sel.png") no-repeat right;border: 1px solid #e2e2e2;background-size: 35%;*/}
+.til div select{width: 100%;display: inline-block;text-indent:4%;outline: none;
+/*将默认的select选择框样式清除*/  appearance:none;  -moz-appearance:none;  -webkit-appearance:none;  -ms-appearance:none;
+/*在选择框的最右侧中间显示小箭头图片*/  background: #fff url("sel.png") no-repeat right;border: 1px solid #e2e2e2;background-size: 35%; }
+
+.til input{display: block;width: 31%;float: left;background: #fff url("sel.png") no-repeat right;border: 1px solid #e2e2e2;background-size: 35%;text-indent:2%;}
+.til p{width: 2.4%;float: left;}
+.sure,.edit{width: 90%;text-align: center;background: #76d461;color: #fff;}
+.sure{margin: 10% auto 5% auto;}
+.edit{margin: 0 auto; display: block;}
+
+/*add*/
+.tit span{color: #f10000;}
+.tit>div{width: 49%;float: left;}
+.tit>p{width: 2%;float: left;display: block;}
+.tic1>div{width: 48%;float: left;/*background: #fff;border: 1px solid #e2e2e2;*/text-align: center;}
+.tic1>input{display: block;width: 48%;float: left;background: #fff;border: 1px solid #e2e2e2;text-indent: 3%;}
+.tic1>p{width: 2%;float: left;}
+.clt{width: 49%;margin-left: 1%;float: left;}
+.crt{width: 49%;margin-right: 1%;float: left;background: url("before.png")no-repeat right;background-size: 28%;}
+/*.crt:hover{background: url("after.png")no-repeat right;background-size: 28%; -webkit-transition: all .8s ease;  -moz-transition: all .8s ease;  -ms-transition: all .8s ease;  -o-transition: all .8s ease;  transition: all .8s ease;}
+.crt:not(:hover){width: 49%;margin-right: 1%;float: left;background: url("before.png")no-repeat right;background-size: 28%;}*/
+.nbb{background: #fff;border: 1px solid #66d1fd;color: #66d1fd;}
+.nvbb{background: #fff;border: 1px solid #ff7690;color: #ff7690;}
+/*.nbb:hover{background: #66d1fd;border: 1px solid #66d1fd;color: #fff;}
+.nvbb:hover{background: #ff7690;border: 1px solid #ff7690;color: #fff;}*/
+
+.jstx{width: 100%;margin:10% auto 0 auto;/*display: table-cell;*/vertical-align: middle;text-align: center;clear: left;}
+.jstx img{vertical-align: middle;}
+.cgtx{width: 100%;margin:10% auto 0 auto;/*display: table-cell;*/vertical-align: middle;text-align: center;clear: left;}
+.cgtx img{vertical-align: middle;}
+
+.hid{display: none;}
+.tcb,.tcm{width: 100%;height: 100%;background: rgba(0,0,0,0.9);position: fixed;top: 0;left:0;z-index:30;color: #fff;overflow:scroll;}
+
+.bsc{width: 80%;margin: 30%  auto 20% auto;border: 1px solid #539344;background: rgba(118,212,97,0.6);}
+.bswz,.bsid,.bsbk{width: 100%;text-align: center;}
+.bsid{margin-bottom: 5%;}
+.bsbk{background: #76d461;}
+
+    /**********************wldzl****************************/
+
+.dzl{width: 100%;background: #fff;margin: 0 auto 4% auto;display: block; }
+.dzl:after{clear: left;}
+.dzl div{float:left;}
+.dzl>div{width: 100%;text-align: center;}
+.ld1{color: #323233;}
+.ld1>div{width: 45%;}
+.ld11{padding-left: 5%;text-align: left;}
+.ld12{padding-right: 5%;text-align: right;}
+.ld2{color: #808080; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+
+/*************************图片上传*************************/
+.panel{  width:90%;  height:auto;  margin:6% auto 0 auto;  }
+.content{  width: 100%;  margin-top:3%;  height:auto;  }
+.list li,.list1 li{ float:left;width:28%;  position:relative;}
+.list li{  border:1px dashed #979797;background:#F8F8F6;}
+.list1 li{ border:1px dashed #76d461;background:#d8ebd4;}
+.list li img,.list1 li img{  margin: 0 auto; position:absolute; right:0; top:0;}
+.list li span,.list1 li span{ display:block; position:absolute;  background:url(del.png) no-repeat;background-size: 100%;}
+.list li input,.list1 li input{ display:block; width:100%; text-align:center; }
+.list li input{ background:#e8e8e8 url(add.png) no-repeat center; background-size: 50%;}
+.list1 li input{ background:#d8ebd4 url(gadd.png) no-repeat center; background-size: 50%;}
+.file{ position:absolute; top:0; right: 0;width:100%;  filter:alpha(opacity:0);opacity: 0; }
+
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+    /**********************wldz****************************/
+    .tit{height: 108px;line-height: 108px;font-size: 36px;}
+    .tic,.tic1,.tic1 div,.tic1 label,.tic1 input,.til,.til div,.til div select,.til p, .sure,.edit{height: 122px;line-height: 122px;font-size: 42px;}
+    .tic,.tic1 div,.tic1 input,.tic2,.til div, .til div select,.sure,.edit{border-radius: 20px;}
+    .tic2{height: 412px;line-height: 72px;font-size: 36px;}
+    .tic1 div img{width: 62px;height: 88px;vertical-align: middle;}
+
+    /**********************wldzl****************************/
+    .dzl{height: 230px;line-height: 230px;}
+    .dzl>div{height: 115px;line-height: 115px; }
+    .ld1{font-size: 44px;}
+    .ld2{font-size: 34px;}
+
+    /*************************图片上传*************************/
+    .list,.list1{ height:392px;}
+    .list li,.list li input, .file,.list li img,.list1 li,.list1 li input, .file,.list1 li img{  height:390px;}
+    .list li span,.list1 li span{  width:64px; height:64px; right:-32px; top:-32px;}
+
+    .jstx{height: 480px;line-height: 480px;}
+    .jstx img{width:382px;height: 382px;}
+    .cgtx{height: 248px;line-height: 248px;}
+    .cgtx img{width:218px;height: 218px;}
+
+    .bswz{height: 92px;line-height: 92px;font-size: 66px;}
+    .bsid{height: 68px;line-height: 68px;font-size: 36px;}
+    .bsbk{height: 126px;line-height: 126px;font-size: 48px;}
+    .bsc,.bsbk{border-radius: 20px;}
+
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+    /**********************wldz****************************/
+    .tit{height: 70px;line-height: 70px;font-size: 24px;}
+    .tic,.tic1,.tic1 div,.tic1 input,.til,.til div,.til div select,.til p, .sure,.edit{height: 82px;line-height: 82px;font-size: 28px;}
+    .tic,.tic1 div,.tic1 input,.tic2,.til div,.til div select, .sure,.edit{border-radius: 10px;}
+    .tic2{height: 276px;line-height: 42px;font-size: 24px;}
+    .tic1 div img{width: 42px;height: 60px;vertical-align: middle;}
+
+    /**********************wldzl****************************/
+    .dzl{height: 150px;line-height: 150px;}
+    .dzl>div{height: 75px;line-height: 75px; }
+    .ld1{font-size: 32px;}
+    .ld2{font-size: 24px;}
+
+    /*************************图片上传*************************/
+    .list,.list1{ height:262px;}
+    .list li,.list li input, .file,.list li img,.list1 li,.list1 li input, .file,.list1 li img{  height:260px;}
+    .list li span,.list1 li span{  width:40px; height:40px; right:-20px; top:-20px;}
+
+    .jstx{height: 320px;line-height: 320px;}
+    .jstx img{width:250px;height: 250px;border-radius: 100px;}
+    .cgtx{height: 168px;line-height: 168px;}
+    .cgtx img{width:140px;height: 140px;}
+
+    .bswz{height: 64px;line-height: 64px;font-size: 44px;}
+    .bsid{height: 45px;line-height: 45px;font-size: 24px;}
+    .bsbk{height: 82px;line-height: 82px;font-size: 28px;}
+    .bsc,.bsbk{border-radius: 10px;}
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+    /**********************wldz****************************/
+    .tit{height: 32px;line-height: 32px;font-size: 12px;}
+    .tic,.tic1 ,.tic1 div,.tic1 input,.til,.til div,.til div select,.til p, .sure,.edit{height: 38px;line-height: 38px;font-size: 14px;}
+    .tic,.tic1 div,.tic1 input,.tic2,.til div,.til div select, .sure,.edit{border-radius: 5px;}
+    .tic2{height: 122px;line-height: 20px;font-size: 12px;}
+    .tic1 div img{width: 18px;height: 28px;vertical-align: middle;}
+
+    /**********************wldzl****************************/
+    .dzl{height: 70px;line-height: 70px;}
+    .dzl>div{height: 35px;line-height: 35px; }
+    .ld1{font-size: 14px;}
+    .ld2{font-size: 12px;}
+
+    /*************************图片上传*************************/
+    .list,.list1{ height:118px;}
+    .list li,.list li input, .file,.list li img,.list1 li,.list1 li input, .file,.list1 li img{  height:116px;}
+    .list li span,.list1 li span{  width:20px; height:20px; right:-10px; top:-10px;}
+
+    .jstx{height: 142px;line-height: 142px;}
+    .jstx img{width:116px;height: 116px;border-radius: 50px;}
+    .cgtx{height: 80px;line-height: 80px;}
+    .cgtx img{width:66px;height: 66px;}
+
+    .bswz{height: 30px;line-height: 30px;font-size: 20px;}
+    .bsid{height: 20px;line-height: 20px;font-size: 12px;}
+    .bsbk{height: 36px;line-height: 36px;font-size: 14px;}
+    .bsc,.bsbk{border-radius: 5px;}
+}

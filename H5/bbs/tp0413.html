@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>宝宝秀投票页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+
+
+    <!-- Link CSS -->
+
+    <link rel="stylesheet" type="text/css" href="ayc/menu.css" media="all">
+    <link rel="stylesheet" type="text/css" href="ayc/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="ayc/tabs.css"/>
+    <script type="text/javascript" src="ayc/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="ayc/jquery.masonry.min.js" ></script>
+    <script src="ayc/modernizr.custom.js"></script>
+
+
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #f1f1f1;
+            font-family: "Microsoft YaHei";
+            font-size: 100%;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        button{border: none;}
+        .ts1 {
+            background: rgba(118, 212, 97, 0.6);
+            margin-top: -30px;
+            color: #fff;
+            position: relative;
+            z-index: 20;
+        }
+
+        .ts2 {
+            background: rgba(254, 10, 130, 0.6);
+            color: #fff;
+            margin-top: -30px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .ci {
+            width: 100%;
+            background: url("ayc/pb.png") no-repeat;
+            background-size: cover;
+        }
+
+        .ctt {
+            width: 100%;
+            z-index: 100;
+        }
+
+        .ctr {
+            width: 100%;
+            float: left;
+            color: #2dcb83;
+            text-align: center;
+        }
+
+        .ctn {
+            width: 100%;
+            float: left;
+            padding-right: 6%;
+        }
+
+        .cbt {
+            width: 18%;
+            float: right;
+            text-align: center;
+        }
+
+        .cbt a {
+            display: block;
+            width: auto;
+            height: auto;
+        }
+
+        .thrl {
+            width: 100%;
+        }
+
+        .item {
+            width: 30%;
+            float: left;
+        }
+
+        .item a {
+            width: 100%;
+            display: block;
+        }
+
+        .item img {
+            width: 100%;
+        }
+
+        .item div {
+            width: 100%;
+            float: left;
+        }
+
+        .jj {
+            width: 2.5%;
+            float: left;
+        }
+
+        .l1 {
+            height: auto;
+        }
+
+        .l2 {
+            background: #fff;
+            text-align: center;
+            color: #808080;
+        }
+
+        .content-wrap section{padding: 0;}
+        .content{padding: 5px;}
+        .sbox{width: 96%;margin:0 auto;}
+        .sin{width: 80%;float: left;background: #fff;border: 1px solid #DCDCDC;  }
+        .sin .img1{float: left; }
+        .sin input{float: left;display: block;border: none;width: 88%; }
+        .sbox button{float: left;display: block;width: 19%;background: #76d461;border: 1px solid #76d461;  margin-left: 1%;color: #fff;}
+        .pages{width: 100%;color: #545454;}
+        .lp,.rp{width: 50%;float: left;}
+        .lp{padding-left: 20%;}
+        .rp{padding-right: 20%;}
+
+        @media screen and (max-width: 4096px) and (min-width: 801px) {
+            .ts1 {  margin-top: -76px;height: 76px;line-height: 76px; font-size: 2.25rem; }
+            .ts2 {  margin-top: -76px;height: 76px;line-height: 76px; font-size: 2.25rem; }
+            .ci {
+                width: 100%;
+                height: 23.75rem;
+            }
+
+            .ctt {
+                height: 23.75rem;
+            }
+
+            .ctr {
+                height: 14.25rem;
+                line-height: 14.25rem;
+                font-size: 5.125rem;
+            }
+            .ctn {
+                height: 9.5rem;
+                line-height: 9.5rem;
+                padding: 1rem 0 1rem 0;
+            }
+
+            .ctn img {
+                height: 7.5rem;
+                width: auto;
+            }
+
+            .thrl {
+                margin: 1.875rem 0;
+                height: 23.75rem;
+                line-height: 23.75rem;
+            }
+
+            .item {
+                height: 23.75rem;
+                line-height: 23.75rem;
+            }
+
+            .item a {
+                height: 23.75rem;
+                line-height: 23.75rem;
+            }
+
+            .l1 {
+                height: 18.5rem;
+            }
+
+            .l1 img {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .l2 {
+                height: 5.25rem;
+                line-height: 5.25rem;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                font-size: 45px;
+            }
+            .sbox{width: 96%;margin:0 auto 10px auto;height: 100px;}
+            .sin{width: 80%;float: left; border-radius: 20px;}
+            .sin .img1{width: 90px;height: 100px;float: left; }
+            .sin img{width: 40px;margin:31px 0 31px 25px;float: left; }
+            .sin input,.sbox button{height:100px;line-height: 100px; }
+            .sbox button{border-radius: 20px; }
+            .sin input,.sbox button,.content .list_box li>div .number{font-size: 40px;}
+            .content .list_box li .tou .divP span{font-size: 20px;}
+            .pages,.lp,rp{height:11.375rem;line-height:11.375rem;font-size: 2.75rem;}
+        }
+
+        @media screen and (max-width: 800px) and (min-width: 491px) {
+            .ts1 {  margin-top: -50px;height: 50px;line-height: 50px; font-size: 1.625rem; }
+            .ts2 {  margin-top: -50px;height: 50px;line-height: 50px; font-size: 1.625rem; }
+            .ci {
+                width: 100%;
+                height: 15.625rem;
+            }
+
+            .ctt {
+                height: 15.625rem;
+                font-size: 1.5rem;
+            }
+
+            .ctr {
+                line-height: 3.375rem;
+                padding: 3rem 0 3rem 0;
+                font-size: 3.25rem;
+            }
+            .ctn {
+                height: 6rem;
+                line-height: 6rem;
+                padding: .5rem 0 .5rem 0;
+            }
+
+            .ctn img {
+                height: 5rem;
+                width: auto;
+            }
+
+
+            .thrl {
+                margin: 22px 0;
+                height: 258px;
+                line-height: 258px;
+            }
+
+            .item {
+                height: 258px;
+                line-height: 258px;
+            }
+
+            .item a {
+                height: 258px;
+                line-height: 258px;
+            }
+
+            .l1 {
+                height: 210px;
+            }
+
+            .l1 img {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .l2 {
+                height: 50px;
+                line-height: 50px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                font-size: 20px;
+            }
+            .sbox{width: 96%;margin:0 auto 10px auto;height: 70px;}
+            .sin{width: 80%;float: left; border-radius: 10px;}
+            .sin .img1{width: 60px;height: 70px;float: left; }
+            .sin img{width: 24px;margin:22px 0 22px 18px;float: left; }
+            .sin input,.sbox button{height:70px;line-height: 70px; }
+            .sbox button{border-radius: 10px; }
+            .sin input,.sbox button,.content .list_box li>div .number, .content .list_box li .tou .divP span{font-size: 20px;}
+            .pages,.lp,rp{height:3.375rem;line-height:7.625rem;font-size: 1.75rem;}
+        }
+
+        @media screen and (max-width: 490px) and (min-width: 319px) {
+            .ts1 {  margin-top: -24px;height: 24px;line-height: 24px;font-size: .75rem;  }
+            .ts2 {  margin-top: -24px;height: 24px;line-height: 24px;font-size: .75rem;  }
+            .ci {
+                width: 100%;
+                height: 10rem;
+            }
+
+            .ctt {
+                height: 10rem;
+            }
+
+            .ctr {
+                height: 6rem;
+                line-height: 6rem;
+                font-size: 24px;
+            }
+
+            .ctn {
+                height: 4rem;
+                line-height: 30px;
+                padding: .5rem 0 .5rem 0;
+            }
+
+            .ctn img {
+                height: 3rem;
+                width: auto;
+            }
+
+
+            .thrl {
+                margin: 10px 0;
+                height: 8.2rem;
+                line-height: 8.2rem;
+            }
+
+            .item {
+                height: 8.2rem;
+                line-height: 8.2rem;
+            }
+
+            .item a {
+                height: 8.2rem;
+                line-height: 8.2rem;
+            }
+
+            .l1 {
+                height: 5.8rem;
+            }
+
+            .l1 img {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                height: 5.8rem;
+            }
+
+            .l2 {
+                height: 2.4rem;
+                line-height: 2.4rem;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                font-size: 12px;
+            }
+            .sbox{width: 96%;margin:0 auto 5px auto;height: 30px;}
+            .sin{width: 80%;float: left; border-radius: 5px;}
+            .sin .img1{width: 28px;height: 30px;float: left; }
+            .sin img{width: 14px;margin:7px 0 7px 7px;float: left; }
+            .sin input,.sbox button{height:30px;line-height: 30px; }
+            .sbox button{border-radius: 5px; }
+            .sin input,.sbox button,.content .list_box li>div .number, .content .list_box li .tou .divP span{font-size: 12px;}
+            .pages,.lp,rp{height:3.375rem;line-height:3.375rem;font-size: .875rem;}
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="ci">
+    <div class="ctt">
+        <div class="ctr">幸福宝宝秀 3月</div>
+        <div class="ctn">
+            <div class="cbt"><a href=""><img src="ayc/rule.png" alt=""/></a></div>
+            <div class="cbt"><a href=""><img src="ayc/apply.png" alt=""/></a></div>
+        </div>
+
+    </div>
+</div>
+<!--border-radius: 50%;
+        box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);-->
+
+<div>
+    <div class="tabs tabs-style-circlefill">
+        <nav>
+            <ul>
+                <li><a href="#section-circlefill-1"><span style="border-right: 1px solid #808080;">0-1岁</span></a></li>
+                <li><a href="#section-circlefill-2"><span style="border-right: 1px solid #808080;">2-3岁</span></a></li>
+                <li><a href="#section-circlefill-3"><span>4-6岁</span></a></li>
+            </ul>
+        </nav>
+        <div class="content-wrap">
+            <section id="section-circlefill-1">
+                <div>
+                    <div class="thrl">
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr1.png" alt=""/></div>
+                            <div class="l2">0~1岁&nbsp;吴美美</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr2.png" alt=""/></div>
+                            <div class="l2">2~5岁&nbsp;白美美</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr3.png" alt=""/></div>
+                            <div class="l2">5~8岁&nbsp;白小帅</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                    </div>
+
+                    <div class="sbox"><div class="sin"><div class="img1"><img src="ayc/search.png" alt=""/></div><input type="text" placeholder="搜索您要支持的宝宝编号"/></div><button>搜&nbsp;&nbsp;索</button></div>
+
+                    <div class="content">
+                        <div id="pageCon" class="match_page masonry" style="padding-bottom: 30px">
+                            <ul class="list_box masonry clearfix" >
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/2.jpg" />
+                                            <div class="ts1">flyingMonster</div>
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/1.jpg" />
+                                            <div class="ts2">flyingMonster</div>
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/3.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/4.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/1001.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/1002.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/7.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/8.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/11.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/12.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pages">
+                        <div class="lp">&lt;上一页</div><div class="rp">下一页&gt;</div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="section-circlefill-2">
+                <div>
+                    <div class="thrl">
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr1.png" alt=""/></div>
+                            <div class="l2">0~1岁&nbsp;吴美美</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr2.png" alt=""/></div>
+                            <div class="l2">2~5岁&nbsp;白美美</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr3.png" alt=""/></div>
+                            <div class="l2">5~8岁&nbsp;白小帅</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                    </div>
+                    <div class="sbox"><div class="sin"><div class="img1"><img src="ayc/search.png" alt=""/></div><input type="text" placeholder="搜索您要支持的宝宝编号"/></div><button>搜&nbsp;&nbsp;索</button></div>
+                    <div class="content">
+                        <div id="pageCon" class="match_page masonry" style="padding-bottom: 30px">
+                            <ul class="list_box masonry clearfix" >
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/7.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/8.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/11.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/12.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/5.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/6.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/2.jpg" />
+                                            <div class="ts1">flyingMonster</div>
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/1.jpg" />
+                                            <div class="ts2">flyingMonster</div>
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/3.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/4.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <div class="lp">&lt;上一页</div><div class="rp">下一页&gt;</div>
+                    </div>
+
+                </div>
+
+            </section>
+            <section id="section-circlefill-3">
+                <div>
+                    <div class="thrl">
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr1.png" alt=""/></div>
+                            <div class="l2">0~1岁&nbsp;吴美美</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr2.png" alt=""/></div>
+                            <div class="l2">2~5岁&nbsp;白美美</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                        <div class="item"><a href="">
+                            <div class="l1"><img src="ayc/thr3.png" alt=""/></div>
+                            <div class="l2">5~8岁&nbsp;白小帅</div>
+                        </a></div>
+                        <div class="jj">&nbsp;</div>
+                    </div>
+                    <div class="sbox"><div class="sin"><div class="img1"><img src="ayc/search.png" alt=""/></div><input type="text" placeholder="搜索您要支持的宝宝编号"/></div><button>搜&nbsp;&nbsp;索</button></div>
+                    <div class="content">
+                        <div id="pageCon" class="match_page masonry" style="padding-bottom: 30px">
+                            <ul class="list_box masonry clearfix" >
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/14.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/16.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/111.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/4.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/5.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/6.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/2.jpg" />
+                                            <div class="ts1">flyingMonster</div>
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/1.jpg" />
+                                            <div class="ts2">flyingMonster</div>
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/3.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+
+                                <li class="picCon masonry-brick">
+                                    <div>
+                                        <a href="javascript:void(0)" class="img">
+                                            <img src="ayc/4.jpg" />
+                                        </a>
+                                        <div class="tou">
+                                            <div class="divP">
+                                                <span>236票</span>
+                                                <span>588评论</span>
+                                            </div>
+                                            <a href="javascript:void(0)"  class="vote">投票</a>
+                                        </div><!--/tou-->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <div class="lp">&lt;上一页</div><div class="rp">下一页&gt;</div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <!-- /content -->
+    </div>
+    <!-- /tabs -->
+</div>
+
+
+<script src="ayc/cbpFWTabs.js"></script>
+<script>
+    (function () {
+
+        [].slice.call(document.querySelectorAll('.tabs')).forEach(function (el) {
+            new CBPFWTabs(el);
+        });
+
+    })();
+</script>
+
+
+</body>
+</html>

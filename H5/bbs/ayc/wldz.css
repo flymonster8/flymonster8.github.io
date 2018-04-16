@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family: "Microsoft YaHei";font-size:12px;   background: #f1f1f1;}
+*{ margin:0; padding:0}
+a{ color:#333; text-decoration:none; outline:none}
+img{ border: none;width: 100%;}
+input{ vertical-align:middle; border: none;}
+ul{ list-style:none}
+.clear{ font-size:0; clear:both}
+
+
+
+/**********************wldz****************************/
+
+.tic,.tit,.til{width: 90%;margin: 0 auto;}
+.tit{color: #808080;}
+.til{color: #d4d4d4;}
+.tic{display: block;background: #fff;border: 1px solid #e2e2e2;}
+.til div{width: 31%;float: left;background: #fff url("sel.png") no-repeat right;border: 1px solid #e2e2e2;background-size: 35%;text-indent:2%;}
+.til p{width: 2.4%;float: left;}
+.sure,.edit{width: 90%;text-align: center;background: #76d461;color: #fff;}
+.sure{margin: 10% auto 5% auto;}
+.edit{margin: 0 auto; display: block;}
+
+
+/**********************wldzl****************************/
+
+.dzl{width: 100%;background: #fff;margin: 0 auto 4% auto;display: block; }
+.dzl:after{clear: left;}
+.dzl div{float:left;}
+.dzl>div{width: 100%;text-align: center;}
+.ld1{color: #323233;}
+.ld1>div{width: 45%;}
+.ld11{padding-left: 5%;text-align: left;}
+.ld12{padding-right: 5%;text-align: right;}
+.ld2{color: #808080; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+    /**********************wldz****************************/
+    .tit{height: 108px;line-height: 108px;font-size: 36px;}
+    .tic,.til,.til div,.til p, .sure,.edit{height: 122px;line-height: 122px;font-size: 42px;}
+    .tic,.til div, .sure,.edit{border-radius: 20px;}
+
+    /**********************wldzl****************************/
+    .dzl{height: 230px;line-height: 230px;}
+    .dzl>div{height: 115px;line-height: 115px; }
+    .ld1{font-size: 44px;}
+    .ld2{font-size: 34px;}
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+    /**********************wldz****************************/
+    .tit{height: 70px;line-height: 70px;font-size: 24px;}
+    .tic,.til,.til div,.til p, .sure,.edit{height: 82px;line-height: 82px;font-size: 28px;}
+    .tic,.til div, .sure,.edit{border-radius: 10px;}
+
+    /**********************wldzl****************************/
+    .dzl{height: 150px;line-height: 150px;}
+    .dzl>div{height: 75px;line-height: 75px; }
+    .ld1{font-size: 32px;}
+    .ld2{font-size: 24px;}
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+    /**********************wldz****************************/
+    .tit{height: 32px;line-height: 32px;font-size: 12px;}
+    .tic,.til,.til div,.til p, .sure,.edit{height: 38px;line-height: 38px;font-size: 14px;}
+    .tic,.til div, .sure,.edit{border-radius: 5px;}
+
+    /**********************wldzl****************************/
+    .dzl{height: 70px;line-height: 70px;}
+    .dzl>div{height: 35px;line-height: 35px; }
+    .ld1{font-size: 14px;}
+    .ld2{font-size: 12px;}
+}

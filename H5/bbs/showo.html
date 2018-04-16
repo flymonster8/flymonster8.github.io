@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>babyShow-show</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="ayc/swiper.min.css">
+    <script type="text/javascript" src="ayc/jquery-1.7.2.min.js"></script>
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        a{text-decoration: none;}
+        body {
+            background: #fdfdfd;
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /*background: #fff;*/
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-slide a{width: 100%;}
+        .swiper-slide img{width: 100%;margin: 0  auto;}
+
+        .swiper-button-prev{background-image:url("ayc/prev.png");}
+        .swiper-button-next{background-image:url("ayc/next.png");}
+        .bbs{width: 100%;height: auto;position: absolute;z-index: 10;  left: 0;background:rgba(117,204,110,0.8);bottom:0;color: #fff;}
+        .bbs img{width: 100%;}
+        .bbsn{width: 100%;height: auto;position: absolute;z-index: 10;  left: 0;background:rgba(117,204,110,0.8);top:0;color: #fff;}
+        .bbsn img{width: 100%;}
+        .bsl1{width: 100%;float: left;border-bottom: 1px solid #fff;}
+        .bsl2{width: 100%;float: left;}
+        .bsl2 div{float: left;text-align: center;}
+        .bsl2 p{background: #fff;width: 1px;margin: 0;clear: left;}
+        .share{height: auto;position: absolute;z-index: 10;  right: 3%;width: 60%;text-align:center;}
+        .share a{height: auto;width: auto;color: #6a6a6a;}
+        .share img{margin: auto;}
+        .dz{width: 65%;float: left;}
+        .dz img{width: auto;}
+        .fx{width: 35%;float: left;}
+        .fx img{width: auto;}
+        .slt{width: 20%;text-align:right;float: left;}
+        .slt img{border-radius: 50px;}
+        .srt{width:80%;text-align: left;float: left;}
+        .srt span{display: block;width: 100%;padding-left: 5%;}
+        .bct{width: 33%;}
+        .bct a{width: 100%;height: 100%;display: block;color: #fff;}
+        .sx{width: 1px;}
+
+        .Top_Record{width: 100%;position: absolute;z-index: 10;  left: 0;}
+        .topRec_List .maquee{ width:100%;  margin:0 auto; color:#7C7C7C}
+        .topRec_List ul{ width:100%;list-style: none!important; overflow: scroll;  display: block;  list-style-type: disc;  -webkit-margin-before: 0;  -webkit-margin-after: 0;  -webkit-margin-start: 0;  -webkit-margin-end: 0;  -webkit-padding-start: 0;}
+        .topRec_List li{ width:100%; text-align:center;  }
+        /*.topRec_List li:nth-child(2n){ background:#077cd0}*/
+        .topRec_List li div{ width: 90%;margin: 0 auto;border-bottom: 1px dashed #aaa;text-align: left;}
+
+
+        @media screen and (max-width: 4096px) and (min-width: 801px) {
+            .bbs{height: 17.5rem;line-height: 17.5rem;}
+            .bbsn{height: 17.5rem;line-height: 17.5rem;}
+            .bsl1{height:8.75rem;line-height: 8.75rem;}
+            .bsl2{height:8.75rem;line-height: 8.75rem;}
+            .sx{height:8.75rem;line-height: 8.75rem;}
+            .bsl2 p{height: 4.375rem;line-height: 4.375rem;margin: 2.1875rem 0 0 0;}
+            .slt{height:8.75rem;line-height: 8.75rem;}
+            .srt{height:8.75rem;line-height: 8.75rem;}
+            .slt img{width: auto;height:7.75rem;margin: .5rem 0 0 0;}
+            .srt span{height: 4.375rem;line-height: 4.375rem;font-size: 2.375rem;}
+            .share{top: 0;height:8.125rem;line-height:8.125rem;}
+            .share a{font-size:2.2rem; }
+            .dz img{width: auto;height: 2.2rem;margin-bottom: -6px;}
+            .fx img{width: auto;height: 2.2rem;margin-bottom: -6px;}
+            .bct a{font-size:2.375rem;}
+            .Top_Record{top:22rem;}
+            .topRec_List ul{ height:900px;}
+            .topRec_List li{  height:auto; font-size:2rem; }
+            .topRec_List li div{  max-height:28rem;min-height:4rem;line-height:4rem; }
+        }
+
+        @media screen and (max-width: 800px) and (min-width: 491px) {
+            .bbs{height: 11.625rem;line-height: 11.625rem;}
+            .bbsn{height: 11.625rem;line-height: 11.625rem;}
+            .bsl1{height:5.8125rem;line-height: 5.8125rem;}
+            .bsl2{height:5.8125rem;line-height: 5.8125rem;}
+            .sx{height:5.8125rem;line-height: 5.8125rem;}
+            .bsl2 p{height: 2.875rem;line-height: 2.875rem;margin: 1.46875rem 0 0 0;}
+            .slt{height:5.8125rem;line-height: 5.8125rem;}
+            .srt{height:5.8125rem;line-height: 5.8125rem;}
+            .slt img{width: auto;height: 5.0125rem;margin: .4rem 0 0 0;}
+            .srt span{height: 2.90625rem;line-height: 2.90625rem;font-size: 1.625rem;}
+            .share{top: 0;height:5.25rem;line-height:5.25rem;}
+            .share a{font-size:2rem; }
+            .dz img{width: auto;height: 2rem;margin-bottom: -4px;}
+            .fx img{width: auto;height: 2rem;margin-bottom: -4px;}
+            .bct a{font-size:1.625rem;}
+            .Top_Record{top:15rem;}
+            .topRec_List ul{ height:600px;}
+            .topRec_List li{  height:auto; font-size:1.25rem; }
+            .topRec_List li div{  max-height:240px;min-height:40px;line-height:40px; }
+        }
+
+        @media screen and (max-width: 490px) and (min-width: 319px) {
+            .bbs{height: 5.6rem;line-height: 5.6rem;}
+            .bbsn{height: 5.6rem;line-height: 5.6rem;}
+            .bsl1{height:2.8rem;line-height: 2.8rem;}
+            .bsl2{height:2.8rem;line-height: 2.8rem;}
+            .sx{height:2.8rem;line-height: 2.8rem;}
+            .bsl2 p{height: 1.375rem;line-height: 1.375rem;margin: .7125rem 0 0 0;}
+            .slt{height:2.8rem;line-height: 2.8rem;}
+            .srt{height:2.8rem;line-height: 2.8rem;}
+            .slt img{width: auto;height: 2.2rem;margin: .3rem 0 0 0;}
+            .srt span{height: 1.4rem;line-height: 1.4rem;font-size: .75rem;}
+            .share{top: .5rem;height:2rem;line-height:2rem;}
+            .share a{font-size:.8rem; }
+            .dz img{width: auto;height: 1rem;margin-bottom: -2px;}
+            .fx img{width: auto;height: 1rem;margin-bottom: -2px;}
+            .bct a{font-size:.75rem;}
+            .Top_Record{top:6rem;}
+            .topRec_List ul{ height:360px;}
+            .topRec_List li{  height:auto; font-size:.75rem; }
+            .topRec_List li div{  max-height:7.5rem;min-height:1.25rem;line-height:1.25rem; }
+        }
+
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="ayc/100.png" alt=""/>
+            <div class="share">
+                <div class="dz"><a href=""><img src="ayc/z.png" alt=""/>喜欢（88888）</a></div>
+                <div class="fx"><a href=""><img src="ayc/share.png" alt=""/>分享</a></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="ayc/2001.png" alt=""/>
+            <div class="share">
+                <div class="dz"><a href=""><img src="ayc/z.png" alt=""/>喜欢（88888）</a></div>
+                <div class="fx"><a href=""><img src="ayc/share.png" alt=""/>分享</a></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="ayc/2002.png" alt=""/>
+            <div class="share">
+                <div class="dz"><a href=""><img src="ayc/z.png" alt=""/>喜欢（88888）</a></div>
+                <div class="fx"><a href=""><img src="ayc/share.png" alt=""/>分享</a></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="bbsn">
+                <div class="bsl1">
+                    <div class="slt"><img src="ayc/tx.png" alt=""/></div>
+                    <div class="srt">
+                        <span>xdrtgxdrtgdrtg</span>
+                        <span>xdrtgxdrtgdrtg</span>
+                    </div>
+                </div>
+                <div class="bsl2">
+                    <div class="bct"><a href="">我的萌照</a></div>
+                    <div class="sx"><p>&nbsp;</p></div>
+                    <div class="bct"><a href="">评&nbsp;&nbsp;论</a></div>
+                    <div class="sx"><p>&nbsp;</p></div>
+                    <div class="bct"><a href="">给我投票</a></div>
+                </div>
+            </div>
+            <div class="Top_Record">
+                <div class="topRec_List">
+                    <div class="maquee">
+                        <ul>
+                            <li>
+                                <div>1依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>2依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>3依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>4依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>5依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>6依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>7依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>8依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依依</div>
+                            </li>
+                            <li>
+                                <div>艾鹏飞!艾鹏飞!艾鹏飞</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+        </div>
+    </div>
+
+    <div class="bbs">
+        <div class="bsl1">
+            <div class="slt"><img src="ayc/tx.png" alt=""/></div>
+            <div class="srt">
+                <span>我是小土豆，今年5岁啦</span>
+                <span>大家快来给我投票吧~</span>
+            </div>
+        </div>
+        <div class="bsl2">
+            <div class="bct"><a href="">我的萌照</a></div>
+            <div class="sx"><p>&nbsp;</p></div>
+            <div class="bct"><a href="">评&nbsp;&nbsp;论</a></div>
+            <div class="sx"><p>&nbsp;</p></div>
+            <div class="bct"><a href="">给我投票</a></div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <!--<div class="swiper-pagination"></div>-->
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="ayc/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });
+</script>
+</body>
+</html>

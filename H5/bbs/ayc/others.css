@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+*{margin:0;}
+body{background: #f1f1f1; font-family: "Microsoft YaHei";  font-size: 100%; }
+a{display: block;text-decoration: none;}
+.list{width: 100%;background: #fff;height: auto;margin-bottom: 3%;}
+.b1{width: 100%;}
+.b1::after {content:" "; display:block; height:0; clear:both; visibility:hidden;}
+.b1 div{float: left;}
+.lleft{width: 20%;padding-left: 5%;display: table-cell;vertical-align: middle;}
+.lleft img{vertical-align: middle;border-radius: 50px;}
+.lright{width: 40%;}
+.lright div{width: 100%;}
+.ll1{color: #808080;}
+.lr1{color: #d5d5d5;}
+.b2{color: #424242;padding-left: 10%;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.b3{width: 100%;padding-left: 10%;color: #76d461;/*display: table-cell;vertical-align: middle;*/}
+.b3 img{vertical-align: middle;}
+.b4{width: 100%;color: #76d461;padding: 3% 0 5% 5%;}
+.b4 img{ width: 28%;margin-left: 3%;float: left;}
+.b4::after {content:" "; display:block; height:0; clear:both; visibility:hidden;}
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+    .b1,.lleft,.lright{height:8.625rem;line-height:8.625rem;}
+    .lleft img{height: 88px;}
+    .lright div{height: 4.3125rem;line-height: 4.3125rem;font-size: 2rem;}
+    .b2{height: 4.3125rem;line-height: 4.3125rem;font-size: 2.625rem;}
+    .b3{height: 5rem;line-height: 5rem;font-size: 2rem;}
+    .b3 img{height: 4rem;}
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+    .b1,.lleft,.lright{height:5.8rem;line-height:5.8rem;}
+    .lleft img{height: 56px;}
+    .lright div{height: 2.9rem;line-height: 2.9rem;font-size: 1.5rem;}
+    .b2{height: 2.9rem;line-height: 2.9rem;font-size: 1.875rem;}
+    .b3{height: 3.9rem;line-height: 3.9rem;font-size: 1.25rem;}
+    .b3 img{height: 2.5rem;}
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+    .b1,.lleft,.lright{height:4rem;line-height:4rem;}
+    .lleft img{height: 36px;}
+    .lright div{height: 2rem;line-height: 2rem;font-size: .8rem;}
+    .b2{height: 2rem;line-height: 2rem;font-size: 1rem;}
+    .b3{height: 3rem;line-height: 3rem;font-size: .75rem;}
+    .b3 img{height: 1.5rem;}
+}

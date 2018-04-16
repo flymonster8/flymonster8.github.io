@@ -1,0 +1,25 @@
+@charset "utf-8";
+@-ms-viewport {  width: device-width;  }
+@-webkit-viewport {  width: device-width;  }
+@-moz-viewport {  width: device-width;  }
+@-ms-viewport {  width: device-width;  }
+@-o-viewport {  width: device-width;  }
+@viewport {  width: device-width;  }
+
+*{margin:0;padding: 0;}
+body{background: #f1f1f1;  font-family: "Microsoft YaHei";  font-size: 100%; }
+a{display: block;text-decoration: none;}
+img{width: 100%;}
+.zt{width: 92%;margin: 4% auto 0 auto;}
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+    img{border-radius: 20px;}
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+    img{border-radius: 10px;}
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+    img{border-radius: 5px;}
+}

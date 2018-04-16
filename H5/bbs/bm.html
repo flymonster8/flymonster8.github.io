@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>宝宝秀-报名</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <link href="ayc/bm.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="ayc/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+    <div class="panel">
+        <div class="content">
+            <ul class="list">
+                <li>
+                    <input type='button' /><!--class="choose"-->
+                    <input type="file" class="file" />
+                    <img src="ayc/sc.png" alt="彩票"/><span></span>
+                </li>
+
+                <li>
+                    <input type='button' />
+                    <input type="file" class="file" />
+                    <!--<img   />-->
+                </li>
+                <li><input type='button' />
+                    <input type="file" class="file" />
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="tj">
+        提&nbsp;交&nbsp;报&nbsp;名
+    </div>
+
+    <!--成功弹层-->
+    <div class="tcb hid" >
+        <div class="jstx"><img src="ayc/bb.png" alt=""/></div>
+        <div class="tpt1">恭喜您~报名成功</div>
+        <div class="tshort1">
+            根据您上传的资料，您的宝宝（宝宝ID:123456789）将参与0~3岁组竞选，我们将尽快审核。
+        </div>
+
+        <a class="is" href="">
+            <div class="tp"><img src="ayc/icon_others.png" alt=""/></div>
+            <div class="isc">看看其他宝宝</div>
+        </a>
+        <a class="is" href="">
+            <div class="tp"><img src="ayc/icon_home.png" alt=""/></div>
+            <div class="isc">回到首页</div>
+        </a>
+        <a class="is" href="">
+            <div class="tp"><img src="ayc/icon_clock.png" alt=""/></div>
+            <div class="isc">查看成长记忆</div>
+        </a>
+
+        <div class="tips">除了投票，您还可能对这些感兴趣</div>
+        <div class="ggw"><a href=""><img src="ayc/gg1.png" alt=""/></a></div>
+    </div>
+
+    <!--选择弹层-->
+    <div class="tcm hid  " >
+       <div class="db">
+           <div class="til1">
+               <div class="zx">&nbsp;</div>
+               <p>&nbsp;</p>
+               <div class="xc">&nbsp;</div>
+               <p>&nbsp;</p>
+               <div class="mry">&nbsp;</div>
+           </div>
+           <div class="til">
+               <div>拍照</div>
+               <p>&nbsp;</p>
+               <div>相册</div>
+               <p>&nbsp;</p>
+               <div>成长记忆中选</div>
+           </div>
+       </div>
+
+        <div class="cancels">
+            取&nbsp;&nbsp;消
+        </div>
+    </div>
+
+    <script>
+        var pop= $('.tcb');
+        var choice= $('.tcm');
+        $(document).ready(function(){
+            $('.tj').click(function(){
+                pop.fadeIn();
+            });
+            /*$('.choose').click(function(){
+                choice.fadeIn();
+            });
+            $('.cancels').click(function(){
+                choice.fadeOut();
+            });*/
+
+
+        });
+    </script>
+
+</body>
+</html>

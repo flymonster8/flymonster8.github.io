@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+
+*{margin:0;padding: 0;}
+input{border: none;}
+body {  background: #f0f0f0;  font-family: "Microsoft YaHei";  font-size: 100%;   margin: 0;  padding: 0;  }
+a {  text-decoration: none;  }
+img {  width: 100%;  }
+.grbj{width: 100%;background: url("grbj.png") no-repeat;background-size: 100%;  -webkit-filter: blur(10px) ;  -moz-filter: blur(10px) ;  -o-filter: blur(10px) ;  -ms-filter: blur(10px) ;  filter: blur(10px) ;  }
+.grjs{width: 100%;position: relative;}
+.grjs div{width: 100%;float: left;text-align: center;}
+.jstx{display: table-cell;vertical-align: middle;}
+.jstx img{border: 2px solid #76d461;vertical-align: middle;}
+.jswz{color: #fff;}
+.zw{height: 5%;}
+.item{width: 100%;background: #fff;color: #727272;display: block;padding: 0 3%;margin-bottom: 2%;}
+.item div{width: 47%;float: left;}
+.iwz{text-align: left;}
+.inxt{display: table-cell;vertical-align: middle;text-align: right;}
+.inxt img{vertical-align: middle; }
+
+
+@media screen and (max-width: 4096px) and (min-width: 801px) {
+    .grbj,.grjs{height: 452px;}
+    .grjs{margin-top: -452px;}
+    .jstx{height: 248px;line-height: 248px;margin-top: 62px;}
+    .jstx img{border-radius: 150px;width:218px;height: 218px;}
+    .jswz{height: 102px;line-height: 102px;font-size: 48px;}
+    .item,.iwz,.inxt{height:138px;line-height: 138px; font-size: 36px;}
+    .inxt img{width: 26px;height:44px; }
+
+}
+
+@media screen and (max-width: 800px) and (min-width: 491px) {
+    .grbj,.grjs{height: 302px;}
+    .grjs{margin-top: -302px;}
+    .jstx{height: 168px;line-height: 168px;margin-top: 44px;}
+    .jstx img{border-radius: 100px;width:140px;height: 140px;}
+    .jswz{height: 58px;line-height: 58px;font-size: 30px;}
+    .item,.iwz,.inxt{height:92px;line-height: 92px; font-size: 24px;}
+    .inxt img{width: 16px;height:30px; }
+
+}
+
+@media screen and (max-width: 490px) and (min-width: 319px) {
+    .grbj,.grjs{height: 134px;}
+    .grjs{margin-top: -134px;}
+    .jstx{height: 80px;line-height: 80px;margin-top: 16px;}
+    .jstx img{border-radius: 50px;width:66px;height: 66px;}
+    .jswz{height: 24px;line-height: 24px;font-size: 16px;}
+    .item,.iwz,.inxt{height:40px;line-height: 40px; font-size: 12px;}
+    .inxt img{width: 8px;height:12px; }
+
+
+}
