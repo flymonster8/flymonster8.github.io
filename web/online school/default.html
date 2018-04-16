@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link href="http://at.alicdn.com/t/font_613484_ds13gdcy30hk6gvi.css" rel="stylesheet">
+		<style>
+			.til{width: 90%;margin: 0 auto;}
+			.til div{width: 31%;border-radius: 5px;float: left;position: relative;
+				/*在选择框的最右侧中间显示小箭头图片*/  /*background:#fff url("img/sel.svg") no-repeat right;border: 1px solid #e2e2e2;background-size: 35%;*/}
+			.til div select{
+				width: 100%;outline: none;border: none;
+				/*将默认的select选择框样式清除*/  appearance:none;  -moz-appearance:none;  -webkit-appearance:none;  -ms-appearance:none;
+				 }
+			.til div .iconfont{position: absolute;right: 0;top: 0;display: block;}
+			.til div:hover .icon-xiala{
+				display: none;
+			}
+			.til div .icon-xiala-copy{display: none;}
+			.til div:hover .icon-xiala-copy{
+				/*-webkit-transform:  rotate(180deg);
+				transform:  rotate(180deg);
+				-webkit-transform:  rotate(-1);
+				transform:  rotate(-1);*/
+				display: block;
+			}
+			/*.til div:hover:hover .iconfont{
+				-webkit-transform:  rotate(0deg);
+				transform:  rotate(0deg);
+			}*/
+
+			.til div, .til div select{
+				height: 38px;
+				line-height: 38px;
+				font-size: 14px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="til">
+			<div>
+				<select name="" id="">
+					<option value="">2014</option>
+					<option value="">2015</option>
+					<option value="">2016</option>
+				</select>
+				<i class="iconfont icon-xiala"></i>
+				<i class="iconfont icon-xiala-copy"></i>
+
+			</div>
+			<div>
+				<select name="" id="">
+					<option value="">01</option>
+					<option value="">02</option>
+					<option value="">03</option>
+				</select>
+				<i class="iconfont icon-xiala"></i>
+				<i class="iconfont icon-xiala-copy"></i>
+			</div>
+			<div>
+				<select name="" id="">
+					<option value="">01</option>
+					<option value="">02</option>
+					<option value="">03</option>
+				</select>
+				<i class="iconfont icon-xiala"></i>
+				<i class="iconfont icon-xiala-copy"></i>
+			</div>
+		</div>
+	</body>
+</html>

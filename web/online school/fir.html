@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>推荐页</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/over-resize.js"></script>
+    <link rel="stylesheet" href="css/fir.css">
+
+</head>
+<body>
+    <!--<header class="head">
+        <div class="L back">
+            <a href="#"><img src="img/back.svg" alt=""></a>
+        </div>
+        <div class="m-title">会员注册</div>
+        <div class="R "></div>
+    </header>-->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(img/test.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/01.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/02.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(img/03.jpg)"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- ayc-add 跳过  暂时去掉-->
+        <!--<a href="index-o.html" class="skip">跳过</a>-->
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay:true,
+            spaceBetween: 30,
+            effect: 'fade',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+    <div class="foot ">
+        <a class="register" href="register.html">注册</a>
+        <a class="login" href="login.html">登录</a>
+    </div>
+</body>
+</html>

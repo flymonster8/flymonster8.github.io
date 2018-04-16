@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>JQscroll原版示例</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #ACF;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            transition: opacity .3s ease, transform .3s ease;
+        }
+
+        /* 底部导航栏的属性及过渡属性 */
+        .navbarhide {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        /* 底部导航栏隐藏时的属性 */
+        .content {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #AFC;
+            position: relative;
+        }
+
+        .bd1, .bd2 {
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dotted #000;
+            position: absolute;
+        }
+
+        .headholder {
+            width: 50%;
+            background-color: #F60;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #monitor {
+            position: fixed;
+            left: 30%;
+            top: 50%;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            function monitor() {
+                /*var winH=$(window).height();*/
+                var winH = window.innerHeight;    //获取浏览器窗口高度，若要支持IE需要在此处做兼容
+                var winST = $(window).scrollTop();  //获取scrollTop
+                var docH = $(document).height();  //获取文档高度
+                var arr = [winH, winST, docH];
+                var winSTbefore = 0;   //声明一个变量，用于装触发scroll事件的上一个scrollTop
+                $('#navbar').css('height', winH / 10 + 'px'); //设置底部导航条高度
+                $('#content').css({'height': winH * 3});   //撑开文档高度
+                $('.headholder').css({'height': winH / 10 + 'px', 'line-height': winH / 10 + 'px'});
+                $('.bd1').css({'top': winH}); //分屏线
+                $('.bd2').css({'top': winH * 2}); //分屏线
+                $('#navbar>h2').css('line-height', winH / 10 + 'px');    //设置导航栏文字行高
+
+                $('#monitor').html('<h3>winH: ' + winH + '</h3><h3>winST: ' + winST + '</h3><h3>docH: ' + docH + '</h3>');  //滑动时显示刷新各项值
+                return arr;
+            }
+
+            monitor();
+
+            $(window).scroll(function () {    //页面滑动时
+                var arr = monitor();
+                var winH = arr[0];    //声明winH 浏览器窗口高度
+                var winST = arr[1];  //声明winST scrollTop
+                var docH = arr[2];  //声明docH 文档高度
+                /*console.log('winST:'+winST+' winH:'+winH+' docH:'+docH+' arr: '+arr);*/
+                if (winST <= winH / 10) {
+                    $('#navbar').removeClass('navbarhide'); //在首屏时显示导航条
+                } else if (winST + winH >= docH) {
+                    $('#navbar').removeClass('navbarhide'); //到达底部时显示
+                } else if (winST > winSTbefore) {
+                    $('#navbar').addClass('navbarhide');    //向下滑动时隐藏
+                } else if (winST < winSTbefore) {
+                    $('#navbar').removeClass('navbarhide'); //向上滑动时显示
+                }
+                winSTbefore = winST;  //更新winSTbefore的值
+                /*setTimeout(function(){winSTbefore=winST;},0)*/
+            })
+        })
+    </script>
+</head>
+    <body>
+        <div id="content" class="content">  <!-- 撑开高度 -->
+            <div class="headholder" align="center"><h2>show navbar</h2></div>   <!-- 此区域内navbar展示 -->
+            <div id="monitor"></div>    <!-- 显示各项数值 -->
+            <div class="bd1" align="center">1</div> <!-- 第一屏线 -->
+            <div class="bd2" align="center">2</div> <!-- 第二屏线 -->
+        </div>
+        <div id="navbar" class="navbar" align="center"><h2>Navbar</h2></div>   <!-- 底部导航栏 -->
+    </body>
+</html>
