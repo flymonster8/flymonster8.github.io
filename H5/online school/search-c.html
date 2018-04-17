@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport">
+		<title>搜索课程页面</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link href="http://at.alicdn.com/t/font_613484_9e742njhr7djkyb9.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/search.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/over-resize.js"></script>
+	</head>
+	<body>
+		<div class="topShow bor_bg">
+			<header class="nhead">
+				<div class="L back">
+					<a href="javascript:;history.back()"><img src="img/back.svg" alt=""></a>
+				</div>
+				<!--此处添加一个判断，游客模式显示全部-->
+				<!--<div class="m-title">教师详情</div>-->
+				<form class="R">
+					<div class=" bar5">
+						<input type="text" placeholder="请输入">
+						<button type="submit"><i class="iconfont icon-sousuo"></i></button>
+					</div>
+				</form>
+			</header>
+
+			<!--<div class="til">
+				<div>
+					<select name="" id="">
+						<option value="">2014</option>
+						<option value="">2015</option>
+						<option value="">2016</option>
+					</select>
+					<i class="iconfont icon-xiala"></i>
+
+				</div>
+				<div>
+					<select name="" id="">
+						<option value="">01</option>
+						<option value="">02</option>
+						<option value="">03</option>
+					</select>
+					<i class="iconfont icon-xiala"></i>
+				</div>
+				<div>
+					<select name="" id="">
+						<option value="">01</option>
+						<option value="">02</option>
+						<option value="">03</option>
+					</select>
+					<i class="iconfont icon-xiala"></i>
+				</div>
+			</div>-->
+
+			<!--<ul class="dropmenum">
+				<li>帅哥
+					<ol>
+						<li>
+							<a href="#">罗晋</a>
+							<div class="drct">llslsllsll</div>
+						</li>
+						<li><a href="#">刘志鹏</a></li>
+						<li><a href="#">周乐</a></li>
+					</ol>
+					<div class="zzc"></div>
+				</li>
+				<li>美女
+					<ol>
+						<li><a href="#">刘涛</a></li>
+						<li><a href="#">范冰冰</a></li>
+						<li><a href="#">刘诗诗</a></li>
+					</ol>
+				</li>
+				<li>卡通
+					<ol>
+						<li><a href="#">小破孩</a></li>
+						<li><a href="#">喜羊羊</a></li>
+						<li><a href="#">柯南</a></li>
+					</ol>
+				</li>
+			</ul>-->
+			<div class="drops">
+				<div class="firs">全部年级 <i class="iconfont icon-xiala"></i></div>
+				<div class="secs">全部科目 <i class="iconfont icon-xiala"></i></div>
+				<div class="ths">全部分类 <i class="iconfont icon-xiala"></i></div>
+			</div>
+		</div>
+
+		<div class="zzc hide">
+
+			<!--全部年级-->
+			<div class="gr-all">
+				<div class="zclt">
+					<ul>
+						<li>全部</li>
+						<li>小学</li>
+						<li>初中</li>
+						<li>高中</li>
+					</ul>
+				</div>
+				<div class="zcrt">
+					<ul>
+						<li>全部</li>
+					</ul>
+				</div>
+				<div class="zcrt hide">
+					<ul>
+						<li>全部</li>
+						<li>一年级</li>
+						<li>二年级</li>
+						<li>三年级</li>
+						<li>四年级</li>
+						<li>五年级</li>
+						<li>六年级</li>
+					</ul>
+				</div>
+				<div class="zcrt hide">
+					<ul>
+						<li>全部</li>
+						<li>一年级</li>
+						<li>二年级</li>
+						<li>三年级</li>
+					</ul>
+				</div>
+				<div class="zcrt hide">
+					<ul>
+						<li>全部</li>
+						<li>一年级</li>
+						<li>二年级</li>
+						<li>三年级</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--全部科目-->
+			<div class="subject-all hide">
+				<div class="sub-alls">
+				<!--<div class="sub-allsn">-->
+					<ul>
+						<li>全部</li>
+						<li>数学</li>
+						<li>物理</li>
+						<li>化学</li>
+					</ul>
+					<!--<ul>
+						<li>全部</li>
+						<li>数学</li>
+						<li>语文</li>
+						<li>英语</li>
+						<li>政治</li>
+						<li>历史</li>
+						<li>地理</li>
+						<li>生物</li>
+						<li>物理</li>
+						<li>化学</li>
+					</ul>-->
+				</div>
+			</div>
+
+			<div class="category-all hide">
+				<div class="sub-alls">
+					<ul>
+						<li>全部</li>
+						<li>直播</li>
+						<li>点播</li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="showlist">
+			<ul>
+				<li class="bor_bg">
+					<a href="" class="hitem">
+						<div class="cphoto">
+							<img src="img/china.jpg" alt="">
+							<div>剩余18个名额</div>
+						</div>
+						<div class="hinfo">
+							<div class="htitle"><span>语</span><i>【名师讲堂】</i>小学五年级语文同步培优班—直播教学</div>
+							<div class="hlabel">
+								<ul>
+									<li>专家精讲</li>
+									<li>|</li>
+									<li>名师直播</li>
+									<li>|</li>
+									<li>集中答疑</li>
+									<li>|</li>
+									<li>课后练习</li>
+								</ul>
+							</div>
+							<div class="ctimes">
+                            <span>
+                                <img src="img/time.svg" alt="">
+                            </span>
+								<span>3月24日</span>
+								<span>16:30</span>
+							</div>
+							<div class="cp">¥&nbsp;<span>45</span></div>
+						</div>
+					</a>
+				</li>
+
+				<li class="bor_bg">
+					<a class="hitem">
+						<div class="cphoto">
+							<img src="img/05.jpg" alt="">
+						</div>
+						<div class="hinfo">
+							<div class="htitle"><span>外</span><i>【名师讲堂】</i>小学五年级英语同步培优班—直播教学</div>
+							<div class="hlabel">
+								<ul>
+									<li>专家精讲</li>
+									<li>|</li>
+									<li>名师直播</li>
+									<li>|</li>
+									<li>集中答疑</li>
+									<li>|</li>
+									<li>课后练习</li>
+								</ul>
+							</div>
+
+							<div class="ctimes">
+							</div>
+							<div class="cpf">免费</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="bor_bg">
+					<a class="hitem">
+						<div class="cphoto">
+							<img src="img/l01.jpg" alt="">
+							<div>剩余18个名额</div>
+						</div>
+						<div class="hinfo">
+							<div class="htitle"><span>数</span><i>【名师讲堂】</i>小学五年级数学同步培优班—直播教学</div>
+							<div class="hlabel">
+								<ul>
+									<li>专家精讲</li>
+									<li>|</li>
+									<li>名师直播</li>
+									<li>|</li>
+									<li>集中答疑</li>
+									<li>|</li>
+									<li>课后练习</li>
+								</ul>
+							</div>
+							<div class="ctimes">
+                            <span>
+                                <img src="img/time.svg" alt="">
+                            </span>
+								<span>3月24日</span>
+								<span>16:30</span>
+							</div>
+							<div class="cp">¥&nbsp;<span>88</span></div>
+						</div>
+					</a>
+				</li>
+
+				<li class="bor_bg">
+					<a class="hitem">
+						<div class="cphoto">
+							<img src="img/china.jpg" alt="">
+							<div>剩余18个名额</div>
+						</div>
+						<div class="hinfo">
+							<div class="htitle"><span>语</span><i>【名师讲堂】</i>小学五年级语文同步培优班—直播教学</div>
+							<div class="hlabel">
+								<ul>
+									<li>专家精讲</li>
+									<li>|</li>
+									<li>名师直播</li>
+									<li>|</li>
+									<li>集中答疑</li>
+									<li>|</li>
+									<li>课后练习</li>
+								</ul>
+							</div>
+							<div class="ctimes">
+                            <span>
+                                <img src="img/time.svg" alt="">
+                            </span>
+								<span>3月24日</span>
+								<span>16:30</span>
+							</div>
+							<div class="cp">¥&nbsp;<span>45</span></div>
+						</div>
+					</a>
+				</li>
+
+				<li class="bor_bg">
+					<a class="hitem">
+						<div class="cphoto">
+							<img src="img/05.jpg" alt="">
+						</div>
+						<div class="hinfo">
+							<div class="htitle"><span>外</span><i>【名师讲堂】</i>小学五年级英语同步培优班—直播教学</div>
+							<div class="hlabel">
+								<ul>
+									<li>专家精讲</li>
+									<li>|</li>
+									<li>名师直播</li>
+									<li>|</li>
+									<li>集中答疑</li>
+									<li>|</li>
+									<li>课后练习</li>
+								</ul>
+							</div>
+
+							<div class="ctimes">
+							</div>
+							<div class="cpf">免费</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="bor_bg">
+					<a class="hitem">
+						<div class="cphoto">
+							<img src="img/l01.jpg" alt="">
+							<div>剩余18个名额</div>
+						</div>
+						<div class="hinfo">
+							<div class="htitle"><span>数</span><i>【名师讲堂】</i>小学五年级数学同步培优班—直播教学</div>
+							<div class="hlabel">
+								<ul>
+									<li>专家精讲</li>
+									<li>|</li>
+									<li>名师直播</li>
+									<li>|</li>
+									<li>集中答疑</li>
+									<li>|</li>
+									<li>课后练习</li>
+								</ul>
+							</div>
+							<div class="ctimes">
+                            <span>
+                                <img src="img/time.svg" alt="">
+                            </span>
+								<span>3月24日</span>
+								<span>16:30</span>
+							</div>
+							<div class="cp">¥&nbsp;<span>88</span></div>
+						</div>
+					</a>
+				</li>
+
+
+			</ul>
+		</div>
+
+
+		<script src="js/search.js"></script>
+
+
+	</body>
+</html>

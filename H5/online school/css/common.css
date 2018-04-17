@@ -1,0 +1,86 @@
+@charset "UTF-8";
+html, body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: microsoft YaHei;
+}
+
+* {  text-align: center; }
+
+a {  text-decoration: none; color:#333;}
+
+img { width: 100%; }
+
+input {  padding: 0;  display: inline-block;  border: none; }
+
+span {  display: inline-block; }
+
+textarea {  padding: 0;  display: block;  border: none; }
+
+ul{list-style: none;overflow: hidden;margin: 0 auto;padding: 0; }
+
+
+
+/*可公用头部*/
+header {  display: block;  }
+
+.fb{font-weight: bold;}
+
+.L{float: left;}
+.R{float: right;}
+
+.head {  width: 100%;position: relative;overflow: hidden;}
+.head > div {  height: 3.4375rem;  line-height:3.4375rem;  font-size: 1.1875rem;  }
+
+
+.back{width: 14.4%;}
+.back>a{display: block;}
+.back>a>img{width:1.5rem;vertical-align: middle;}
+.nhead  .back>a{font-size: 0.875rem;}
+.nhead  .back>a>i{font-size: 1.5rem;}
+
+.next{width: 14.4%;}
+.next>a{display: block;}
+.next>a>img{width:1.5rem;vertical-align: middle;}
+.nhead  .next>a{font-size: 0.875rem;}
+.nhead  .next>a>i{font-size: 1.5rem;}
+
+.m-title{width: 70%;position: absolute;left: 15%;}
+.nhead  .m-title{font-size: 1.125rem;}
+.foot {  position: fixed;  bottom: 0;  left: 0;  width: 100%;  overflow: hidden; }
+
+
+
+
+
+
+
+
+/*首页*/
+.nhead {  width: 100%;position: relative;overflow: hidden;}
+.nhead > div {  height: 2.8125rem;  line-height:2.8125rem;  }
+
+
+
+.footn{width: 100%;position: fixed;left: 0;bottom: 0;background: #fff;z-index: 10;}
+.footn>ul{margin: 0 auto;padding: 0;border-top:0.03125rem solid #e5e5e5;overflow: visible;}
+.footn>ul>li{width: 20%;height: 3.03125rem;  float: left;position: relative;}
+.footn>ul>li .flogo{width: 1.25rem;height: 1.25rem;margin: 0.5625rem auto 0 auto;background-size: 100% 100%;}
+.fitem{height: 1rem;line-height: 1rem;font-size: 0.6875rem;color: #999;}
+.sel .fitem{color: #57ccf2;}
+.footn ul li:nth-child(3) a{  width: 100%; position: absolute;  padding: 0;  left: 0;  top: -1.5rem;  }
+
+.flogo1{background: url("../img/home.png");}
+.sel .flogo1{background: url("../img/homec.png");}
+.flogo2{background: url("../img/tips.png");}
+.sel .flogo2{background: url("../img/tipsc.png");}
+.flogo3{background: url("../img/fx.png");}
+.sel .flogo3{background: url("../img/fxc.png");}
+.flogo4{background: url("../img/my.png");}
+.sel .flogo4{background: url("../img/myc.png");}
+
+.footnew{width: 100%;position: fixed;left: 0;bottom: 0;background: #fff;z-index: 10;}
+.footnew>ul{margin: 0 auto;padding: 0;border-top:0.03125rem solid #e5e5e5;overflow: visible;}
+.footnew>ul>li{width: 25%;height: 3.03125rem;  float: left;position: relative;}
+.footnew>ul>li .flogo{width: 1.25rem;height: 1.25rem;margin: 0.5625rem auto 0 auto;background-size: 100% 100%;}
+
