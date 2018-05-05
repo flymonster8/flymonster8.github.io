@@ -34,16 +34,20 @@ header {  display: block;  }
 
 
 .back{width: 14.4%;}
-.back>a{display: block;}
+.back>a{display: block;height: 2.8125rem;  line-height: 2.8125rem;}
 .back>a>img{width:1.5rem;vertical-align: middle;}
 .nhead  .back>a{font-size: 0.875rem;}
-.nhead  .back>a>i{font-size: 1.5rem;}
+.nhead  .back>a>i{font-size: 1.5rem;color: #333;}
 
 .next{width: 14.4%;}
-.next>a{display: block;}
+.next>a{display: block;height: 2.8125rem;  line-height: 2.8125rem;}
 .next>a>img{width:1.5rem;vertical-align: middle;}
 .nhead  .next>a{font-size: 0.875rem;}
-.nhead  .next>a>i{font-size: 1.5rem;}
+.nhead  .next>a>i{font-size: 1.5rem;color: #333;}
+.nhead  .next>.isc{line-height: 2.8125rem;}
+.nhead  .next>.isc>img{width: 1.5rem;height: 1.5rem;vertical-align: middle;}
+.nhead  .next>.iysc{line-height: 2.8125rem;}
+.nhead  .next>.iysc>img{width: 1.5rem;height: 1.5rem;vertical-align: middle;}
 
 .m-title{width: 70%;position: absolute;left: 15%;}
 .nhead  .m-title{font-size: 1.125rem;}
@@ -57,7 +61,7 @@ header {  display: block;  }
 
 
 /*首页*/
-.nhead {  width: 100%;position: relative;overflow: hidden;}
+.nhead {  width: 100%;position: relative;background: #fff;overflow: hidden;}
 .nhead > div {  height: 2.8125rem;  line-height:2.8125rem;  }
 
 

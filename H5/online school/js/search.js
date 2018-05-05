@@ -1,7 +1,7 @@
 
 var pg= $('.zzc');
 var g,gg,index,nindex;
-var pg= $('.zzc');
+/*var pg= $('.zzc');*/
 
 $(document).ready(function(){
 
