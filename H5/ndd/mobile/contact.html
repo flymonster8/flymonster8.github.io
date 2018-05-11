@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/over-resize.js"></script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+    <div class="mnavi">
+        <ul>
+            <li><a href="index.html">商品列表</a></li>
+            <li><a href="contact.html" class="ck">联系我们</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+    </div>
+    <!-- Swiperp -->
+    <div class="swiper-container swiper-container-p">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href=""><img src="../img/bgn1.jpg" alt=""></a>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            /*autoplay:true,*/
+            spaceBetween: 30,
+            effect: 'fade',
+            /*pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },*/
+        });
+    </script>
+
+    <div class="ctmds">
+        <ul>
+            <li>
+                <div>
+                    <div class="ctmdsp"><img src="../img/phoneg.png" alt=""></div>
+                    <div class="ctmdslf">0471-3484398</div>
+                    <div class="ctmdsls">14747334666</div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <div class="ctmdsp"><img src="../img/localg.png" alt=""></div>
+                    <div class="ctmdslf">新城区成吉思汗大街</div>
+                    <div class="ctmdsls">蒙鑫国际牛嘟嘟旗舰店</div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <div class="ctmdsp"><img src="../img/emailg.png" alt=""></div>
+                    <div class="ctmdslc">316063441@qq.com</div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <div class="ctmdsp"><img src="../img/wechat.png" alt=""></div>
+                    <div class="ctmdslf">扫一扫二维码</div>
+                    <div class="ctmdsls">关注牛嘟嘟微信号</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html >
+<html >
+<head>
+    <meta charset=utf-8" />
+    <title>li文章分页</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/pages.js"></script>
+</head>
+<body>
+<ul id="all" class="plist">
+    <li>第1集</li>
+    <li>第2集</li>
+    <li>第3集</li>
+    <li>第4集</li>
+    <li>第5集</li>
+    <li>第6集</li>
+    <li>第7集</li>
+    <li>第8集</li>
+    <li>第9集</li>
+    <li>第10集</li>
+    <li>第11集</li>
+    <li>第12集</li>
+    <li>第13集</li>
+    <li>第14集</li>
+    <li>第15集</li>
+    <li>第16集</li>
+    <li>第17集</li>
+    <li>第18集</li>
+    <li>第19集</li>
+    <li>第20集</li>
+</ul>
+<div class="page">
+    <div id="page">
+
+    </div>
+
+
+</div>
+    <script>
+        var zz=getzz();
+        var pageno=1 ; //当前页
+        var pagesize=5; //每页多少条信息
+        if(zz.length%pagesize==0){
+            var  pageall =zz.length/pagesize ;
+        }else{
+            var  pageall =parseInt(zz.length/pagesize)+1;
+        }   //一共多少页
+        change(1);
+    </script>
+</body>
+</html>
