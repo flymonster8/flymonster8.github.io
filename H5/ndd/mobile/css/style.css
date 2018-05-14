@@ -45,7 +45,7 @@ ul{list-style: none;overflow: hidden;margin: 0 auto;padding: 0; }
 .tjsptp{width: 100%;height: 9rem;}
 .tjsptp>img{width: 100%;height:100%;}
 .tjsptt{width: 82%;line-height: 1.4rem;padding: 0.5625rem 0;font-size: 0.875rem;color: #000033;text-align: center;}
-.tjspct{width: 82%;line-height: 1.125rem;height: 7.875rem;padding-bottom:0.8125rem;border-bottom:0.03125rem solid #eaeaea;font-size: 0.625rem;color: #666;text-align: left;}
+.tjspct{width: 82%;line-height: 1.125rem;height: 9rem;padding-bottom:0.8125rem;border-bottom:0.03125rem solid #eaeaea;font-size: 0.625rem;color: #666;text-align: left;}
 .tjspinfo{width: 82%;line-height: 2.375rem;overflow: hidden;}
 .tjxj{width: 68%;float: left;text-align: left;}
 .tjxj>img{width:3rem;height: 0.46875rem;}
