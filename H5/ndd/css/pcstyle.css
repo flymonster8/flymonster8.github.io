@@ -124,10 +124,10 @@ footer{width:100%;max-width: 1920px;background: #383838;color: #fff;}
 /*.tjl>ul>li:nth-child(2n+1){margin-right: 2%;}
 .tjl>ul>li:nth-child(2n){margin-left: 2%;}*/
 .tjl>ul>li>div{width: 100%;background: #fff;overflow: hidden;}
-.tjltp{width: 32%;height: 400px;float: left;}
+.tjltp{width: 300px;height: 346px;float: left;}
 .tjltp>img{width: 100%;height:100%;}
 .tjlsr{width: 68%;float: left;}
-.tjltt{width: 82%;line-height: 36px;padding: 80px 0 44px 0;font-size: 36px;color: #333;text-align: left;}
+.tjltt{width: 82%;line-height: 36px;/*padding: 80px 0 44px 0;*/padding: 46px 0 28px 0;font-size: 36px;color: #333;text-align: left;}
 .tjlct{width: 82%;line-height: 36px;height: 144px;font-size: 20px;color: #333;text-align: left;}
 .tjlinfo{width: 82%;line-height: 60px;padding-bottom: 32px;overflow: hidden;}
 .tjlxj{width: 68%;float: left;text-align: left;}
